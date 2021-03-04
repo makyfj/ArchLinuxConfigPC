@@ -1,0 +1,83 @@
+1. iwctl
+    - station wlan0 get-networks
+    - station wlan0 connect SSID
+2. timedatectl set-ntp true
+3. pacman -Syyy
+4. sudo pacman -S reflector
+5. reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+6. lsblk
+7. mkfs.ext4 /dev/root_partition
+8. mount /dev/root_partition /mnt
+9. mkdir /mnt/boot
+10. mkdir /mnt/windows10
+11. mount /dev/root_partition /mnt/boot
+12. mount /dev/root_partition /mnt/windows10
+13. pacstrap /mnt base linux linux-firmware vim amd-ucode
+14. genfstab -U /mnt >> /mnt/etc/fstab
+15. cat /mnt/etc/fstab
+16. arch-chroot /mnt
+17. fallocate -l 3GB /swapfile
+18. chmod 600 /swapfile
+19. mkswap /swapfile
+20. swapon /swapfile
+21. vim /etc/fstab
+22. Add last line: /swapfile none swap defaults 0 0
+23. ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+24. hwclock --systohc
+25. vim /etc/locale.gen
+26. Uncomment en_US.UTF-8
+27. locale-gen
+28. echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+29. vim /etc/hostname 
+30. type your pc name eg: Arch
+31. vim /etc/hosts
+    127.0.0.1   localhost
+    ::1         localhost 
+    127.0.1.1   Arch.localdomain    Arch
+32. passwd
+33. pacman -S grub efibootmgr os-prober ntfs-3g networkmanager
+    network-manager-applet wireless_tools wpa_supplicant dialog
+    mtools dosfstools base-devel linux-headers git bluez bluez-utils
+    pulseaudio-bluetooth cups openssh
+34. grub-install --target=x86_64-efi --efi-directory=/boot
+    --bootloader-id=GRUB
+35. grub-mkconfig -o /boot/grub/grub.cfg
+36. systemctl enable NetworkManager
+37. systemctl enable bluetooth
+38. systemctl enable cups
+39. systemctl enable sshd
+40. useradd -mG wheel username
+41. passwd username
+42. EDITOR=vim visudo
+43. uncommet %wheel ALL=(ALL) ALL
+44. exit
+45. umount -a 
+    If can't find UUID: do mkinitcpio -p linux
+    Also install pacman -S nvidia nvidia-settings
+46. 
+
+Enter into arch root
+
+47. nmtui
+48. sudo pacman -S xf86-video-amdgpuo
+49. sudo pacman -s nvidia nvidia-utils nvidia-settings
+50. sudo pacman -S lightdm light-gtk-greeter 
+    lightdm-gtk-greeter-settings
+51. sudo pacman -S i3-gaps i3status i3lock dmenu
+52. sudo pacman -S alacritty pavucontrol python-pip
+53. sudo systemctl enable lightdm
+54. sudo pacman -S xorg
+55. sudo pacman -S libreoffice firefox dolphin
+56. git clone https://aur.archlinux.org/yay.git
+57. cd yay - makepkg -si PKBUILD
+58. yay -S ttf-fonts timeshift spotify polybar neovim-nightly-bin
+59. pip install dbus
+60. sudo pacman -S tmux 
+61. sudo pacman -S picom nodejs
+62. yay -S flameshot
+63. also install sudo pacman exo
+64. sduo lightdm --test-mode --debug
+65. exit and reboot
+
+
+DONE

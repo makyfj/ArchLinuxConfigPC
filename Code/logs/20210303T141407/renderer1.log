@@ -1,0 +1,4 @@
+[2021-03-03 14:14:08.998] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/.vscode'
+[2021-03-03 14:23:10.099] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2021-03-03 14:26:28.378] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2021-03-03 14:26:29.398] [renderer1] [error] An unknown error occurred. Please consult the log for more details.

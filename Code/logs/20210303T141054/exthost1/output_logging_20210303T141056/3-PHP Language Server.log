@@ -1,0 +1,18 @@
+DEBUG     Checking PHPLS_ALLOW_XDEBUG
+DEBUG     The xdebug extension is not loaded
+
+[Info  - 2:10:56 PM] 5 files total
+[Info  - 2:10:56 PM] Indexing project for definitions and static references
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/logout.php
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/config.php
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/register.php
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/checklogin.php
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/login.php
+[Info  - 2:10:56 PM] Indexing project for dynamic references
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/logout.php
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/config.php
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/register.php
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/checklogin.php
+Parsing file:///home/maky/Farmingdale/Spring2021/BCS430/myFarmstand/php/login.php
+[Info  - 2:10:56 PM] 0 Packages
+[Info  - 2:10:56 PM] All 5 PHP files parsed in 0 seconds. 150 MiB allocated.

@@ -1,0 +1,1 @@
+[2021-03-02 19:05:57.131] [renderer1] [error] ENOENT: no such file or directory, open '/home/maky/.config/Code/User/globalStorage/vscodevim.vim/.registers': Error: ENOENT: no such file or directory, open '/home/maky/.config/Code/User/globalStorage/vscodevim.vim/.registers'

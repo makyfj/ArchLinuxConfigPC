@@ -1,0 +1,56 @@
+[2021-03-02 19:08:01.565] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/maky/.config/Code/User/snippets'
+[2021-03-02 19:08:11.345] [sharedprocess] [info] Installing extension: vscodevim.vim
+[2021-03-02 19:08:14.291] [sharedprocess] [info] Downloaded extension: vscodevim.vim undefined
+[2021-03-02 19:08:14.366] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.vscodevim.vim-1.18.9: vscodevim.vim
+[2021-03-02 19:08:14.367] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/vscodevim.vim-1.18.9
+[2021-03-02 19:08:14.368] [sharedprocess] [info] Installation completed. vscodevim.vim
+[2021-03-02 19:08:14.370] [sharedprocess] [info] Extensions installed successfully: vscodevim.vim
+[2021-03-02 19:08:41.529] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-03-02 19:13:06.858] [sharedprocess] [info] Installing extension: esbenp.prettier-vscode
+[2021-03-02 19:13:10.303] [sharedprocess] [info] Downloaded extension: esbenp.prettier-vscode undefined
+[2021-03-02 19:13:10.478] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.esbenp.prettier-vscode-5.9.2: esbenp.prettier-vscode
+[2021-03-02 19:13:10.478] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/esbenp.prettier-vscode-5.9.2
+[2021-03-02 19:13:10.479] [sharedprocess] [info] Installation completed. esbenp.prettier-vscode
+[2021-03-02 19:13:10.480] [sharedprocess] [info] Extensions installed successfully: esbenp.prettier-vscode
+[2021-03-02 19:13:29.372] [sharedprocess] [info] Installing extension: dbaeumer.vscode-eslint
+[2021-03-02 19:13:30.030] [sharedprocess] [info] Downloaded extension: dbaeumer.vscode-eslint undefined
+[2021-03-02 19:13:30.045] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.dbaeumer.vscode-eslint-2.1.14: dbaeumer.vscode-eslint
+[2021-03-02 19:13:30.045] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/dbaeumer.vscode-eslint-2.1.14
+[2021-03-02 19:13:30.046] [sharedprocess] [info] Installation completed. dbaeumer.vscode-eslint
+[2021-03-02 19:13:30.048] [sharedprocess] [info] Extensions installed successfully: dbaeumer.vscode-eslint
+[2021-03-02 19:14:00.087] [sharedprocess] [info] Installing extension: shrikant.bootstrap5
+[2021-03-02 19:14:00.567] [sharedprocess] [info] Downloaded extension: shrikant.bootstrap5 undefined
+[2021-03-02 19:14:00.574] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.shrikant.bootstrap5-0.0.6: shrikant.bootstrap5
+[2021-03-02 19:14:00.574] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/shrikant.bootstrap5-0.0.6
+[2021-03-02 19:14:00.574] [sharedprocess] [info] Installation completed. shrikant.bootstrap5
+[2021-03-02 19:14:00.576] [sharedprocess] [info] Extensions installed successfully: shrikant.bootstrap5
+[2021-03-02 19:14:22.806] [sharedprocess] [info] Installing extension: ecmel.vscode-html-css
+[2021-03-02 19:14:23.148] [sharedprocess] [info] Downloaded extension: ecmel.vscode-html-css undefined
+[2021-03-02 19:14:23.156] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.ecmel.vscode-html-css-1.10.2: ecmel.vscode-html-css
+[2021-03-02 19:14:23.156] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/ecmel.vscode-html-css-1.10.2
+[2021-03-02 19:14:23.157] [sharedprocess] [info] Installation completed. ecmel.vscode-html-css
+[2021-03-02 19:14:23.158] [sharedprocess] [info] Extensions installed successfully: ecmel.vscode-html-css
+[2021-03-02 19:14:31.253] [sharedprocess] [info] Installing extension: abusaidm.html-snippets
+[2021-03-02 19:14:31.653] [sharedprocess] [info] Downloaded extension: abusaidm.html-snippets undefined
+[2021-03-02 19:14:31.661] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.abusaidm.html-snippets-0.2.1: abusaidm.html-snippets
+[2021-03-02 19:14:31.661] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/abusaidm.html-snippets-0.2.1
+[2021-03-02 19:14:31.662] [sharedprocess] [info] Installation completed. abusaidm.html-snippets
+[2021-03-02 19:14:31.663] [sharedprocess] [info] Extensions installed successfully: abusaidm.html-snippets
+[2021-03-02 19:15:02.936] [sharedprocess] [info] Installing extension: felixfbecker.php-intellisense
+[2021-03-02 19:15:05.409] [sharedprocess] [info] Downloaded extension: felixfbecker.php-intellisense undefined
+[2021-03-02 19:15:05.972] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.felixfbecker.php-intellisense-2.3.14: felixfbecker.php-intellisense
+[2021-03-02 19:15:05.972] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/felixfbecker.php-intellisense-2.3.14
+[2021-03-02 19:15:05.972] [sharedprocess] [info] Installation completed. felixfbecker.php-intellisense
+[2021-03-02 19:15:05.975] [sharedprocess] [info] Extensions installed successfully: felixfbecker.php-intellisense
+[2021-03-02 19:15:31.581] [sharedprocess] [info] Installing extension: dsznajder.es7-react-js-snippets
+[2021-03-02 19:15:32.199] [sharedprocess] [info] Downloaded extension: dsznajder.es7-react-js-snippets undefined
+[2021-03-02 19:15:32.206] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.dsznajder.es7-react-js-snippets-3.1.0: dsznajder.es7-react-js-snippets
+[2021-03-02 19:15:32.206] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/dsznajder.es7-react-js-snippets-3.1.0
+[2021-03-02 19:15:32.207] [sharedprocess] [info] Installation completed. dsznajder.es7-react-js-snippets
+[2021-03-02 19:15:32.208] [sharedprocess] [info] Extensions installed successfully: dsznajder.es7-react-js-snippets
+[2021-03-02 19:21:52.205] [sharedprocess] [info] Installing extension: ritwickdey.liveserver
+[2021-03-02 19:21:55.603] [sharedprocess] [info] Downloaded extension: ritwickdey.liveserver undefined
+[2021-03-02 19:21:56.591] [sharedprocess] [info] Extracted extension to /home/maky/.vscode/extensions/.ritwickdey.liveserver-5.6.1: ritwickdey.liveserver
+[2021-03-02 19:21:56.591] [sharedprocess] [info] Renamed to /home/maky/.vscode/extensions/ritwickdey.liveserver-5.6.1
+[2021-03-02 19:21:56.592] [sharedprocess] [info] Installation completed. ritwickdey.liveserver
+[2021-03-02 19:21:56.597] [sharedprocess] [info] Extensions installed successfully: ritwickdey.liveserver

@@ -1,0 +1,6 @@
+{
+    "editor.fontLigatures": true,
+    "vim.vimrc.enable": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+}

@@ -1,0 +1,89 @@
+# Colors (Ayu Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#000000'
+    foreground: '#ffffff'
+  # Normal colors
+  normal:
+    black: '#000000'
+    red: '#cd0000'
+    green: '#00cd00'
+    yellow: '#cdcd00'
+    blue: '#0000ee'
+    magenta: '#cd00cd'
+    cyan: '#00cdcd'
+    white: '#e5e5e5'
+
+  # Bright colors
+  bright:
+    black: '#7f7f7f'
+    red: '#ff0000'
+    green: '#00ff00'
+    yellow: '#ffff00'
+    blue: '#5c5cff'
+    magenta: '#ff00ff'
+    cyan: '#00ffff'
+    white: '#ffffff'
+
+background_opacity: 0.9
+
+font:
+  #normal fonts
+  normal:
+    family: Fira Code
+    style: Regular
+
+  bold:
+    family: Fira Code
+    style: Bold
+
+  italic:
+    family: Fira Code
+    style: Italic
+
+  # Point size
+  size: 10.6
+
+  family: null
+
+  offset:
+    x: 0
+    y: 0
+
+window:
+  padding:
+    x: 2
+    y: 2
+
+scrolling:
+  # Maximum number of lines in the scroll back buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scroll back is enabled (history > 0).
+  multiplier: 10
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+
+  # When set to `true`, selected text will be copied to both the primary and
+  # the selection clipboard. Otherwise, it will only be copied to the selection
+  # clipboard.
+  save_to_clipboard: true
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  #  - { key: Add, mods: Control, action: IncreaseFontSize }
+  #  - { key: Subtract, mods: Control, action: DecreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
