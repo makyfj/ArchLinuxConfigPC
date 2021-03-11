@@ -23,6 +23,6 @@
     "coc-ultisnips": ">=1.2.3",
     "coc-webpack": ">=1.5.0",
     "coc-word": ">=1.2.2",
-    "coc-xml": ">=1.14.0"
+    "coc-xml": ">=1.14.1"
   }
 }

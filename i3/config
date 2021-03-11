@@ -23,8 +23,8 @@ exec_always feh --bg-fill /home/maky/Pictures/Wallpapers/flowerhouse.jpg
 # #---Basic Definitions---# #
 smart_gaps on
 smart_borders on
-set $inner_gaps 5
-set $outer_gaps -2
+set $inner_gaps 7
+set $outer_gaps 3
 set $term --no-startup-id alacritty
 set $mod Mod4
 set $alt Mod1
