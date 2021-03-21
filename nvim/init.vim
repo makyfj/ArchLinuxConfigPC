@@ -7,10 +7,10 @@ source $HOME/.config/nvim/keys/mappings.vim
 " Theme
 source $HOME/.config/nvim/themes/syntax.vim
 source $HOME/.config/nvim/themes/nvcode.vim
+source $HOME/.config/nvim/plug-config/barbar.vim
 
 " LSP
 source $HOME/.config/nvim/plug-config/coc/coc.vim
-source $HOME/.config/nvim/plug-config/coc/coc-extensions.vim
 
 " General plugins
 source $HOME/.config/nvim/plug-config/rnvimr.vim
@@ -24,3 +24,5 @@ source $HOME/.config/nvim/plug-config/cheat-sh.vim
 source $HOME/.config/nvim/plug-config/bracey.vim
 luafile $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/plug-config/gitgutter.vim
+source $HOME/.config/nvim/plug-config/closetags.vim
+source $HOME/.config/nvim/plug-config/quick-scope.vim

@@ -25,11 +25,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Status Line
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+	Plug 'romgrk/barbar.nvim'
 
 	" snippets
 	Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 
-    " Ranger
+	" Close tags
+	Plug 'alvan/vim-closetag'
+
+	" Fast Comments
+	Plug 'tpope/vim-commentary'
+
+	" Ranger
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
     " FZF
@@ -68,4 +75,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	
 	" Cheat sheet
 	Plug 'dbeniamine/cheat.sh-vim'
+
+	" quick scope
+	Plug 'unblevable/quick-scope'
+
+	" easy motion
+	Plug 'easymotion/vim-easymotion'
+
+	" surroundings
+	Plug 'tpope/vim-surround'
+
 call plug#end()
