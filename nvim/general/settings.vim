@@ -1,9 +1,8 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
-syntax enable                           " Enables syntax highlighting
+syntax enable
 set hidden                              " Required to keep multiple buffers open multiple buffers
-set relativenumber
 set nu
 set guicursor=
 set nowrap                              " Display long lines as just one line
