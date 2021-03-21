@@ -53,6 +53,12 @@
         "UltiSnips",
         "~/.config/nvim/utils/snips"
     ],
+
+	// floaterm
+	"floaterm.completion.enable": true,
+	"floaterm.completion.shortcut": "floaterm",
+	"floaterm.completion.priority": 5,
+
     // explorer
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
@@ -74,7 +80,9 @@
       "Witte",
       "bracey",
       "farmstand",
+      "floaterm",
       "nvcode",
+      "nvim",
       "rnvimr"
     ]
 }

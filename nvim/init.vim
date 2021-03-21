@@ -26,3 +26,5 @@ luafile $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 source $HOME/.config/nvim/plug-config/closetags.vim
 source $HOME/.config/nvim/plug-config/quick-scope.vim
+source $HOME/.config/nvim/plug-config/easymotion.vim
+source $HOME/.config/nvim/plug-config/floaterm.vim

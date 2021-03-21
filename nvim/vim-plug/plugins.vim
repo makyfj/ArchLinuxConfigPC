@@ -29,6 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 	" snippets
 	Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
+	Plug 'honza/vim-snippets'
 
 	" Close tags
 	Plug 'alvan/vim-closetag'
@@ -84,5 +85,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 	" surroundings
 	Plug 'tpope/vim-surround'
+
+	" float term
+	Plug 'voldikss/vim-floaterm'
 
 call plug#end()
