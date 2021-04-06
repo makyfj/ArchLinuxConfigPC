@@ -2,6 +2,8 @@
 let g:mapleader = "\<Space>"
 
 syntax enable
+set nocompatible						" Vim wiki
+filetype plugin on						" Vim wiki
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nu
 set guicursor=
@@ -37,8 +39,10 @@ set clipboard+=unnamedplus              " Copy paste between vim and everything 
 set undofile
 set autochdir                           " Your working directory will always be the same as your working directory
 set termguicolors
-set colorcolumn=80
+" set colorcolumn=90 
 set signcolumn=yes
+autocmd BufNewFile,BufRead * setlocal formatoptions-=r " Disables comments when hit enter in insert mode
+autocmd BufNewFile,BufRead * setlocal formatoptions-=o " Disables comment for o or O
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
@@ -53,3 +57,6 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 " prettier command
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" vim-commentary
+autocmd FileType apache setlocal commentstring=#\ %s

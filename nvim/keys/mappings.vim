@@ -45,7 +45,10 @@ nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
 " c++ compiler
-nnoremap <C-m> :!g++ -std=c++17 % -Wall -g -o %.out && ./%.out<CR>
+"nnoremap <C-m> :!g++ -std=c++17 % -Wall -g -o %.out && ./%.out<CR>
+
+" python compiler
+nnoremap <C-p> :w !python3<CR>
 
 " cSpell
 vmap <leader>qq <Plug>(coc-codeaction-selected)
@@ -53,3 +56,9 @@ nmap <leader>qq <Plug>(coc-codeaction-selected)
 
 " prettier
 nnoremap <F12> :Prettier<CR>
+
+" telescope baby!!
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

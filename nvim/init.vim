@@ -7,7 +7,7 @@ source $HOME/.config/nvim/keys/mappings.vim
 " Theme
 source $HOME/.config/nvim/themes/syntax.vim
 source $HOME/.config/nvim/themes/nvcode.vim
-source $HOME/.config/nvim/plug-config/barbar.vim
+"source $HOME/.config/nvim/plug-config/barbar.vim
 
 " LSP
 source $HOME/.config/nvim/plug-config/coc/coc.vim
@@ -28,3 +28,4 @@ source $HOME/.config/nvim/plug-config/closetags.vim
 source $HOME/.config/nvim/plug-config/quick-scope.vim
 source $HOME/.config/nvim/plug-config/easymotion.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/lua/telescope.nvim.vim

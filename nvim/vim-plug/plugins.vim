@@ -1,10 +1,13 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+	" Vim wiki, notetaking :)
+	Plug 'vimwiki/vimwiki'
+
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
 	
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
+    " File Explorer -- Coc-Explorer is better :)
+    " Plug 'scrooloose/NERDTree'
 	
 	" Treesitter
     Plug 'nvim-treesitter/playground'
@@ -25,7 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Status Line
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-	Plug 'romgrk/barbar.nvim'
+	" Plug 'romgrk/barbar.nvim'
 
 	" snippets
 	Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
@@ -48,6 +51,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	" Web icons
 	Plug 'kyazdani42/nvim-web-devicons'
     Plug 'ryanoasis/vim-devicons'
+	Plug 'yamatsum/nvim-web-nonicons'
 	
 	" Colorizer
     Plug 'norcalli/nvim-colorizer.lua'
@@ -59,7 +63,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
 	
     " Bracey - Live Server for HTML, CSS, JS
-	Plug 'turbio/bracey.vim'
+	Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 	
     " Git Integration
     Plug 'tpope/vim-fugitive'
@@ -89,4 +93,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	" float term
 	Plug 'voldikss/vim-floaterm'
 
+	" Telescope baby!!
+	Plug 'nvim-lua/popup.nvim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
+	
 call plug#end()

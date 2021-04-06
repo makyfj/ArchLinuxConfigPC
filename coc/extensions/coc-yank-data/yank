@@ -1,0 +1,1987 @@
+06e0cd1c50a020ca0e6e797750db37ea|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|105|36|v|javascript
+	farmstand
+ca0b1f97ea813f88b39a35209a2cc8c6|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|108|1|V|javascript
+	            // Debug purposes
+	            // console.log("COMBINED:", combinedAddress);
+9f3c001911334d6ab4a8de2aafc841f2|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|119|1|V|javascript
+	                // Debug purposes
+	                // console.log("lat:", lat, "lon:", lon);
+c859d732183f876cf66b71ab5d9e70ce|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|117|1|V|javascript
+	                getLatLog(l);
+6df2eff7e53c37b93e5403d68ffae36c|file:///opt/lampp/htdocs/farmstandLocalhost/mapData.php|24|1|V|php
+		$searchType = "";
+f87253d3d61ccdb9f183c0892381d025|file:///opt/lampp/htdocs/farmstandLocalhost/mapData.php|35|31|v|php
+	"SELECT title ,address, city, state, zipCode FROM farmstand"
+ee3cf6025fd509408ab36e0a24e685d9|file:///opt/lampp/htdocs/farmstandLocalhost/mapData.php|35|31|v|php
+	"SELECT title ,address, city, state, zipCode FROM farmstand");
+c0bb2196426022e8adf9a5b6d34fd45e|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|75|16|v|javascript
+	onclick
+295c4eb97adbddb2ab040906e7bbadad|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|87|11|V|javascript
+	          console.log("searchType:", searchType, "searchTerm:", searchTerm);
+d5b2a7358e566d53a26fba8d3e61fe29|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|99|1|V|javascript
+	          let showResult = response;
+	
+	          // get data from all
+	          for (let i = 0; i < showResult.length; i++) {
+	            let address = showResult[i].address;
+	            let title = showResult[i].title;
+	            let farmstand_id = showResult[i].id;
+	            // for server
+	            //let farmstand_id = showResult[i].farmstand_id;
+	
+	            jQuery.get(
+	              "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	                address,
+	
+	              function (data) {
+	                let lat = parseFloat(data[0].lat).toFixed(2);
+	                let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	                // Add each address to the map with redICon
+	                let marker = L.marker([lat, lon], {
+	                  icon: redIcon,
+	                }).addTo(myMap);
+	
+	                marker.bindPopup(
+	                  `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	                );
+4e44d5b4b0d8b92f42c6222e72babfc7|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|166|7|V|javascript
+					  ,}}}
+07e01fa27976a21d880234136a186feb|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|89|11|V|javascript
+	          getQuery(response);
+c660bf22d3e0cff81a0347936839a2b4|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|101|1|V|javascript
+	          let showResult = response;
+	
+	          // get data from all
+	          for (let i = 0; i < showResult.length; i++) {
+	            let address = showResult[i].address;
+	            let title = showResult[i].title;
+	            let farmstand_id = showResult[i].id;
+	            // for server
+	            //let farmstand_id = showResult[i].farmstand_id;
+	
+	            jQuery.get(
+	              "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	                address,
+	
+	              function (data) {
+	                let lat = parseFloat(data[0].lat).toFixed(2);
+	                let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	                // Add each address to the map with redICon
+	                let marker = L.marker([lat, lon], {
+	                  icon: redIcon,
+	                }).addTo(myMap);
+	
+	                marker.bindPopup(
+	                  `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	                );
+	              }
+	            );
+9be59fdd187e111df414040325bba9c5|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|101|1|V|javascript
+	          let showResult = response;
+	
+	          // get data from all
+	          for (let i = 0; i < showResult.length; i++) {
+	            let address = showResult[i].address;
+	            let title = showResult[i].title;
+	            let farmstand_id = showResult[i].id;
+	            // for server
+	            //let farmstand_id = showResult[i].farmstand_id;
+	
+	            jQuery.get(
+	              "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	                address,
+	
+	              function (data) {
+	                let lat = parseFloat(data[0].lat).toFixed(2);
+	                let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	                // Add each address to the map with redICon
+	                let marker = L.marker([lat, lon], {
+	                  icon: redIcon,
+	                }).addTo(myMap);
+	
+	                marker.bindPopup(
+	                  `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	                );
+	              }
+	            );
+	          }
+a4d3b161ce1309df1c4e25df28694b7b|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|75|18|v|javascript
+	Submit
+98e1d8363e3fdc50eb18d0b7556005b5|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|79|1|V|javascript
+	    const searchType = "zipCode";
+	    const searchTerm = "11777";
+35d3476e9a2f66acc8f775f5da4f9609|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|75|1|V|javascript
+	  searchButton.onClick = function (e) {
+	    e.preventDefault();
+	    const searchType = document.getElementById("searchType").value;
+	    const searchTerm = document.getElementById("searchTerm").value;
+	    console.log(searchTerm, searchType);
+dc5be4463b2bf359df13c352cf78f9a8|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|81|29|V|javascript
+	  let searchType = "zipCode";
+654e5d749259c3254416a5418700395f|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|81|27|V|javascript
+	  let searchTerm = "11777";
+800040bca0b2c6bfa9c96137f7b46fd0|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|81|3|V|javascript
+	  let searchTerm = "";
+1ccfbb8a5b41df858d8e5e977563b63e|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|74|2|V|javascript
+	  e.preventDefault();
+024f22b3e4020da329dda97e573742f9|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|71|1|V|javascript
+	const searchButton = document.getElementById("submitSearch");
+	
+	searchButton.onClick = function (e) {
+	  e.preventDefault();
+	  const searchType = document.getElementById("searchType").value;
+	  const searchTerm = document.getElementById("searchTerm").value;
+	  console.log(searchTerm, searchType);
+	};
+a1b0b6709ca056062a84a5d84b2ca8b4|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|81|1|V|javascript
+		$("#submitSearch").click(function () {
+	
+	
+		});
+be6db0d75b52324257e639fd361abddb|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|73|1|V|javascript
+	searchButton.onClick = function (e) { e.preventDefault();
+	  const searchType = document.getElementById("searchType").value;
+	  const searchTerm = document.getElementById("searchTerm").value;
+	  console.log(searchTerm, searchType);
+	};
+2bcb8d4c5956c9aa0345824df34c0d81|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|75|21|v|javascript
+	11777
+c75845832955c128301ad2dd681375ba|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|92|1|V|javascript
+	          // for server
+	          //let farmstand_id = showResult[i].farmstand_id;
+665fa065faae7a9f8b66372ae7e83b52|file:///opt/lampp/htdocs/farmstandLocalhost/index.php|9|1|V|php
+				<form method="post">
+65e5f1a88c64bbefdc51e227f36ac722|file:///opt/lampp/htdocs/farmstandLocalhost/index.php|18|1|V|php
+				</form>
+13eba887d8a449c09421d998b521aa15|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|71|1|V|javascript
+	const searchButton = document.getElementById("submitSearch");
+	searchButton.onClick = function () {
+	  const searchType = document.getElementById("searchType").value;
+	  const searchTerm = document.getElementById("searchTerm").value;
+	  console.log(searchTerm, searchType);
+	};
+f584b1c1522b74eece31bf0a858ed65b|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|78|3|V|javascript
+			alert)
+7fa6fdd59935c3daa3713570a854870d|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|78|5|V|javascript
+	    alert("Search Type:", searchType, "Search Term:", searchTerm);
+36ba5b09962a9c8c5ce1b3564f8559d9|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|78|5|V|javascript
+	    console.log("SearchType:", searchType, "Search Term:", searchTerm);
+f963d649863ce64edab9f6cab5016d39|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|79|1|V|javascript
+			  if(searchTerm)
+c2f78b6ee1364219a8cbcce5ffc9725c|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|78|1|V|javascript
+		  if(searchType != ""){
+		  }
+f53e5a5a1894e76f85fedc5e5244948a|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|107|1|V|javascript
+	        let showResult = response;
+	
+	        // get data from all
+	        for (let i = 0; i < showResult.length; i++) {
+	          let address = showResult[i].address;
+	          let title = showResult[i].title;
+	          let farmstand_id = showResult[i].id;
+	          // for server
+	          //let farmstand_id = showResult[i].farmstand_id;
+	
+	          console.log("ZipCode", showResult[i].zipCode);
+	
+	          jQuery.get(
+	            "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	              address,
+	
+	            function (data) {
+	              let lat = parseFloat(data[0].lat).toFixed(2);
+	              let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	              // Add each address to the map with redICon
+	              let marker = L.marker([lat, lon], {
+	                icon: redIcon,
+	              }).addTo(myMap);
+	
+	              marker.bindPopup(
+	                `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	              );
+	            }
+	          );
+	        }
+	      },
+	    });
+3b392721011c6772d9f83fcfc4f9d9ec|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|81|1|V|javascript
+			  $.ajax({
+				  url: "mapData.php",
+				  type: "POST",
+				  dataType: "json",
+				  data: {searchType: searchType, searchTerm: searchTerm},
+				  success: function (response) {
+	
+				  }
+			  })
+88e2aeab3606adb20021c8c1fe5e9fef|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|93|1|V|javascript
+	    $.ajax({
+	      url: "mapData.php",
+	      type: "POST",
+	      dataType: "json",
+	      data: { searchType: searchType, searchTerm: searchTerm },
+	      success: function (response) {
+	        let showResult = response;
+	
+	        // get data from all
+	        for (let i = 0; i < showResult.length; i++) {
+	          let address = showResult[i].address;
+	          let title = showResult[i].title;
+	          let farmstand_id = showResult[i].id;
+	          // for server
+	          //let farmstand_id = showResult[i].farmstand_id;
+	
+	          console.log("ZipCode", showResult[i].zipCode);
+	
+	          jQuery.get(
+	            "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	              address,
+	
+	            function (data) {
+	              let lat = parseFloat(data[0].lat).toFixed(2);
+	              let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	              // Add each address to the map with redICon
+	              let marker = L.marker([lat, lon], {
+	                icon: redIcon,
+	              }).addTo(myMap);
+	
+	              marker.bindPopup(
+	                `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	              );
+	            }
+	          );
+	        }
+	      },
+	    });
+06b0268c06aa402ebe57dfd9400f9fe9|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|172|1|V|javascript
+	    $.ajax({
+	      // from GET to POST, for search for farmstand
+	      type: "POST",
+	      dataType: "json",
+	      url: "mapData.php",
+	      // Added for search for farmstand
+	      //   data: { search: search, searchtype: searchtype },
+	      success: function (response) {
+	        let showResult = response;
+	
+	        // get data from all
+	        for (let i = 0; i < showResult.length; i++) {
+	          let address = showResult[i].address;
+	          let title = showResult[i].title;
+	          let farmstand_id = showResult[i].id;
+	          // for server
+	          //let farmstand_id = showResult[i].farmstand_id;
+	
+	          jQuery.get(
+	            "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	              address,
+	
+	            function (data) {
+	              let lat = parseFloat(data[0].lat).toFixed(2);
+	              let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	              // Add each address to the map with redICon
+	              let marker = L.marker([lat, lon], {
+	                icon: redIcon,
+	              }).addTo(myMap);
+	
+	              marker.bindPopup(
+	                `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	              );
+	            }
+	          );
+	        }
+	      },
+	    });
+	  }
+57ebf423001ce94f4ddb8941682b1ebe|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|172|1|V|javascript
+	    $.ajax({
+	      // from GET to POST, for search for farmstand
+	      type: "POST",
+	      dataType: "json",
+	      url: "mapData.php",
+	      // Added for search for farmstand
+	      //   data: { search: search, searchtype: searchtype },
+	      success: function (response) {
+	        let showResult = response;
+	
+	        // get data from all
+	        for (let i = 0; i < showResult.length; i++) {
+	          let address = showResult[i].address;
+	          let title = showResult[i].title;
+	          let farmstand_id = showResult[i].id;
+	          // for server
+	          //let farmstand_id = showResult[i].farmstand_id;
+	
+	          jQuery.get(
+	            "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	              address,
+	
+	            function (data) {
+	              let lat = parseFloat(data[0].lat).toFixed(2);
+	              let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	              // Add each address to the map with redICon
+	              let marker = L.marker([lat, lon], {
+	                icon: redIcon,
+	              }).addTo(myMap);
+	
+	              marker.bindPopup(
+	                `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	              );
+	            }
+	          );
+	        }
+	      },
+	    });
+1ef24b298700fb75b686ab61a859f6d0|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|164|1|V|javascript
+	// Getting data from mysql/php farmstand and display on map
+	//function getMapData(jQuery) {
+13fac48db8823ee34be5001282df2e61|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|162|19|V|javascript
+	  location.reload();
+4d8910b7d8bab11ff8490f68d1863d0b|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|81|20|V|javascript
+	      location.reload();
+d165e861bac6b75be55bb1ffdac738a1|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|78|4|V|javascript
+		  map
+f8b3a76dfc066f5e5ef14b2690a98a32|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|78|1|V|javascript
+	    myMap.eachLayer(function (layer) {
+	      myMap.removeLayer(layer);
+	    });
+13348442cc6a27032d2b4aa28b75a5d3|file:///opt/lampp/htdocs/farmstandLocalhost/index.php|18|44|v|php
+	Search
+af2c9eb5e04b4b0c524710c134bb5876|file:///opt/lampp/htdocs/farmstandLocalhost/index.php|19|11|V|php
+					inputdd
+a43c1b0aa53a0c908810c06ab1ff3967|file:///opt/lampp/htdocs/farmstandLocalhost/index.php|18|6|v|php
+	input
+7d6f3fd5329063c621ca857e02318511|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|148|1|V|javascript
+					  // Create a layer
+c2350c93cbf487fefa8035d64065d875|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|6|1|V|javascript
+	L.tileLayer(
+	  "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
+	  {
+	    attribution:
+	      'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	    maxZoom: 18,
+	    id: "mapbox/streets-v11",
+	    tileSize: 512,
+	    zoomOffset: -1,
+	    accessToken:
+	      "pk.eyJ1IjoibWFreWZqIiwiYSI6ImNrbHJib21oNjAyZnUyb2xkZnJvcG5kZW8ifQ.EoSKv-aBqUhwqjmcH6fERg",
+	  }
+	).addTo(myMap);
+4cc47fa07ad8d0c7a327ec2463fc9a39|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|74|1|V|javascript
+	// MapBox Attributes let mapBoxAttr =
+	  'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+	  'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
+	
+	// MapBox Url
+9e002510d79cd5ce7a236079ee8fd4a7|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|71|1|V|javascript
+	// Create layer for farmstands
+	let farmstands = L.layerGroup();
+178d468078817887449415cd2def7489|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|71|1|V|javascript
+	// Create layer for farmstands
+	let farmstands = L.layerGroup();
+	
+a66b311547bf3da88f01139271d5bb50|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|119|26|v|javascript
+	cities
+f25ea3d391d17bb4cf248a92f3a0d52b|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|80|24|V|javascript
+	// search and searchType
+	$(document).ready(function () {
+3a128db6a4d11e32c807281ad0ec0b66|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|176|1|V|javascript
+	// Getting data from mysql/php farmstand and display on map
+	//function getMapData(jQuery) {
+	//  let searchType = "zipCode";
+	//  let searchTerm = "11777";
+	
+	//  if (searchTerm != "") {
+	//    $.ajax({
+	//      url: "mapData.php",
+	//      type: "POST",
+	//      dataType: "json",
+	//      data: { searchType: searchType, searchTerm: searchTerm },
+	//      success: function (response) {
+	//        let showResult = response;
+	
+	//        // get data from all
+	//        for (let i = 0; i < showResult.length; i++) {
+	//          let address = showResult[i].address;
+	//          let title = showResult[i].title;
+	//          let farmstand_id = showResult[i].id;
+	//          // for server
+	//          //let farmstand_id = showResult[i].farmstand_id;
+	
+	//          console.log("ZipCode", showResult[i].zipCode);
+	
+	//          jQuery.get(
+	//            "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	//              address,
+	
+	//            function (data) {
+	//              let lat = parseFloat(data[0].lat).toFixed(2);
+	//              let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	//              // Add each address to the map with redICon
+	//              let marker = L.marker([lat, lon], {
+	//                icon: redIcon,
+	//              }).addTo(myMap);
+	
+	//              marker.bindPopup(
+	//                `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	//              );
+	//            }
+	//          );
+	//        }
+	//      },
+	//    });
+	//  } else {
+	//    $.ajax({
+	//      // from GET to POST, for search for farmstand
+	//      type: "POST",
+	//      dataType: "json",
+	//      url: "mapData.php",
+	//      // Added for search for farmstand
+	//      //   data: { search: search, searchtype: searchtype },
+	//      success: function (response) {
+	//        let showResult = response;
+	
+	//        // get data from all
+	//        for (let i = 0; i < showResult.length; i++) {
+	//          let address = showResult[i].address;
+	//          let title = showResult[i].title;
+	//          let farmstand_id = showResult[i].id;
+	//          // for server
+	//          //let farmstand_id = showResult[i].farmstand_id;
+	
+	//          jQuery.get(
+	//            "https://nominatim.openstreetmap.org/search?format=json&q=" +
+	//              address,
+	
+	//            function (data) {
+	//              let lat = parseFloat(data[0].lat).toFixed(2);
+	//              let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	//              // Add each address to the map with redICon
+	//              let marker = L.marker([lat, lon], {
+	//                icon: redIcon,
+	//              }).addTo(myMap);
+	
+	//              marker.bindPopup(
+	//                `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	//              );
+	//            }
+	//          );
+	//        }
+	//      },
+	//    });
+	//  }
+	//}
+	
+	//// calling getMapData fun
+	//$(document).ready(getMapData);
+	
+	//function getQuery(response) {
+	//  showResult = response;
+	
+	//  // get data from all
+	//  for (let i = 0; i < showResult.length; i++) {
+	//    let address = showResult[i].address;
+	//    let title = showResult[i].title;
+	//    let farmstand_id = showResult[i].id;
+	//    // for server
+	//    //let farmstand_id = showResult[i].farmstand_id;
+	
+	//    jQuery.get(
+	//      "https://nominatim.openstreetmap.org/search?format=json&q=" + address,
+	
+	//      function (data) {
+	//        let lat = parseFloat(data[0].lat).toFixed(2);
+	//        let lon = parseFloat(data[0].lon).toFixed(2);
+	
+	//        // Add each address to the map with redICon
+	//        let marker = L.marker([lat, lon], {
+	//          icon: redIcon,
+	//        }).addTo(myMap);
+	
+	//        marker.bindPopup(
+	//          `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	//        );
+	//      }
+	//    );
+	//  }
+	//}
+8e7201f6ec945deb5df88ae72e90a8a9|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|126|1|V|javascript
+	                L.control.layers(overlays).addTo(myMap);
+5c3caf8095044d1c9a39d42a724f7819|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|20|3|V|javascript
+	    layers: [cities],
+f64adc8da652272f3cbcf86b36c3de1e|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|3|6|V|javascript
+	let myMap = L.map(map);
+49d679c99fb5ea14cad08ac8f5183428|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|21|1|V|javascript
+	myMap.
+901f41cd092d3f0265f69555d1bc086e|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|28|1|V|javascript
+	// Creating icon's shadow
+	let leafIcon = L.Icon.extend({
+	  options: {
+	    shadowUrl: "./images/leaf-shadow.png",
+	    iconSize: [38, 95],
+	    shadowSize: [50, 64],
+	    iconAnchor: [22, 94],
+	    shadowAnchor: [4, 62],
+	    popupAnchor: [-3, -76],
+	  },
+	});
+	
+	// multiple icons, using leafIcon
+	let greenIcon = new leafIcon({
+	    iconUrl: "./images/leaf-green.png",
+	  }),
+	  redIcon = new leafIcon({
+	    iconUrl: "./images/leaf-red.png",
+	  }),
+	  orangeIcon = new leafIcon({
+	    iconUrl: "./images/leaf-orange.png",
+	  });
+e9bd5fa90bea261e515bb3769d9c97e7|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|2|1|V|javascript
+	
+	// Create layer for farmstands
+	let farmstands = L.layerGroup();
+	
+045be6f969b1ba5eec68069f407f5cb8|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|2|1|V|javascript
+	
+	let myMap = L.map(map);
+27b06f485bf9bafebf3dfa6f1d9f999a|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|2|1|V|javascript
+	
+	let mymap = l.map(map);
+	
+bac43b9711e9a20531473603a417d7fc|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|3|1|V|javascript
+	let mymap = l.map(map);
+f6d2e7242bdde8eaf69c5a532d2ad19f|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|20|29|v|javascript
+	farmstands
+574cec5d4a8d8bf01dfbaab368e652e7|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|46|1|V|javascript
+		zoom: 10,
+		s
+617e0d9f2cc4caa5ab6b6bdc10d5860d|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|79|1|V|javascript
+	// overlays
+cd7dd02ff5b571472a1e124f9d331d2f|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|80|1|V|javascript
+	let baseMaps = {}
+37a6259cc0c1dae299a7866489dff0bd|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|99|23|v|javascript
+	null
+4340423329d4392a74e1f365dfd77fa7|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|99|5|V|javascript
+	    myMap.removeLayer(baseMaps, overlays);
+882aed188140f39b97e5013233741d9f|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|138|1|V|javascript
+	                L.control.layers(baseLayers, overlays).addTo(myMap);
+87bfda183c4f851a101e97bbb1bbace7|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|138|38|v|javascript
+	Layers
+30f4c01ceb3630f3fb4e100361a41fdb|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|138|1|V|javascript
+	                L.control.layers(baseMaps, overlays).addTo(myMap);
+426e484790274a2ccc0932c0cde9d790|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|100|1|V|javascript
+	    // Remove previous layers from previous search
+3faea2c560091a3fea604edf1003d9d2|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|132|1|V|javascript
+	                L.marker([lat, lon], {
+	                  icon: redIcon,
+	                })
+	                  .bindPopup(
+	                    `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	                  )
+	                  .addTo(farmstandsMarkers);
+cb66a3c6a4cda1bdbc2c8a6755637996|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|180|17|v|javascript
+	// Add each address to the map with redICon
+	                let marker = L.marker([lat, lon], {
+	                  icon: redIcon,
+	                }).addTo(myMap);
+	
+	                marker.bindPopup(
+	                  `${title}<br/><a href="https://www.farmstandwebsite.com/marketPage.php?id=${farmstand_id}">Visit this farmstand</a>`
+	                )
+207c2461f7118a8743eb3fd31700b95b|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|138|19|V|javascript
+	                  .openPopup()
+be08b9e1418bdf5610264062856a1660|file:///opt/lampp/htdocs/farmstandLocalhost/scripts/map.js|139|27|V|javascript
+	                  .addTo(farmstandsMarkers);
+71616fae26b9fae041e57fc799a21a54|file:///opt/lampp/htdocs/farmstandLocalhost/index.php|13|1|V|php
+	option value=""
+ef3e30e070f70244fd6578d88a6b77ac|file:///opt/lampp/htdocs/farmstandLocalhost/index.php|13|1|V|php
+	option
+460c337b4e20469859dd57efeb51ccab|file:///opt/lampp/htdocs/farmstandLocalhost/searchResult.php|11|1|V|php
+		$query = "select f.title, f.description, f.coverimage, f.farmstand_id, p.name from farmstand as f inner join product as p on p.farmstand_id = f.farmstand_id where p.name LIKE '%$searchterm%'";
+ee7eaf55e97514e3eba55243c581628b|file:///opt/lampp/htdocs/farmstandLocalhost/mapData.php|30|2|V|php
+		$query = "SELECT "
+d8feeab232452801e252d3919307ca09|file:///opt/lampp/htdocs/farmstand/scripts/map.js|122|50|V|javascript
+	            console.log("ZipCode", showResult[i].zipCode);
+bb1ebabd6d4dbeecc91c9394d982d71a|file:///opt/lampp/mysql/runMysql.txt|1|1|V|text
+	mysql -h 127.0.0.1 -P 3306 -u root -p
+63294ceb1072a975ffe786ec33509ba8|file:///opt/lampp/htdocs/registration_system/config.php|7|20|v|php
+	UsersDB
+40a65f7c406125b9c458f3219513a672|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-form/src/App.js|1|1|V|javascript
+	import logo from './logo.svg';
+515ca67aff42891234c5ab2ed57f2d3d|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-form/src/App.js|6|1|V|javascript
+	      <header className="App-header">
+	        <img src={logo} className="App-logo" alt="logo" />
+	        <p>
+	          Edit <code>src/App.js</code> and save to reload.
+	        </p>
+	        <a
+	          className="App-link"
+	          href="https://reactjs.org"
+	          target="_blank"
+	          rel="noopener noreferrer"
+	        >
+	          Learn React
+	        </a>
+	      </header>
+1cb251ec0d568de6a929b520c4aed8d1|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-form/src/FormikForm.js|16|16|v|javascript
+	text
+6f90b04b71c85d85e820f481c77e2e33|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-form/src/FormikForm.js|22|44|v|javascript
+	</label>
+caf9b6b99962bf5c2264824231d7a40c|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-form/src/FormikForm.js|8|17|v|javascript
+	info
+87e4071388700479a20b575964f50064|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-form/src/FormikForm.js|11|24|V|javascript
+	      values.name = "hello";
+7748b72eaa804c5b4a47247e2785d0de|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-form/src/FormikForm.js|48|7|V|javascript
+	        <input type="" />
+0035725fdb12d8778b677ec61330b5e2|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/withFormikExample.js|7|3|V|javascript
+			<form action=""></form>
+49e1864f20d7a77f0da19e60516d800a|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/withFormikExample.js|18|11|v|javascript
+	htmlFor
+70c3dd7576aab3d53279142de2889cac|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/ConnectExample.js|3|23|v|javascript
+	this.props.
+370964eec07cba8c52acb1ce1b35ab6a|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/App.js|5|31|v|javascript
+	With
+864aa22b1fce62df8bc3643c586ddcee|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/App.js|8|4|V|javascript
+		  MyEnhancedLoginForm
+b3f6fb1763ff4c0c3c56a27c80388d28|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/style.css|1|1|V|css
+	form {
+	
+	}
+43ebc47054f501199f26b0b4f4ed074f|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/withFormikExample.js|3|1|V|javascript
+	import "./style.css";
+7fb706b85dd47b4bfa992f9b2efbc4e8|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/App.js|1|1|V|javascript
+	import "./App.css";
+	import { MyEnhancedLoginForm } from "./withFormikExample";
+	
+	function App() {
+	  return (
+	    <div className="App">
+	      <h1>With Formik</h1>
+	      <MyEnhancedLoginForm />
+	    </div>
+	  );
+	}
+	
+	export default App;
+a9b7ba70783b617e9998dc4dd82eb3c5|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/withFormikExample.js|43|8|v|javascript
+	1000
+b7a782741f667201b54880c925faec4b|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/with-formik/src/withFormikExample.js|43|8|v|javascript
+	10000
+b42e0c2fb92112312b8bfcb80b551ad3|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/App.js|2|1|V|javascript
+	import './App.css';
+c7720ad10d16546b85779c60f1385f79|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/App.js|1|1|V|javascript
+	import logo from "./logo.svg";
+7fca1027f38fdc881cd3f7165607932b|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/App.css|1|1|V|css
+	.App {
+	  text-align: center;
+	}
+	
+	.App-logo {
+	  height: 40vmin;
+	  pointer-events: none;
+	}
+	
+	@media (prefers-reduced-motion: no-preference) {
+	  .App-logo {
+	    animation: App-logo-spin infinite 20s linear;
+	  }
+	}
+	
+	.App-header {
+	  background-color: #282c34;
+	  min-height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  font-size: calc(10px + 2vmin);
+	  color: white;
+	}
+	
+	.App-link {
+	  color: #61dafb;
+	}
+	
+	@keyframes App-logo-spin {
+	  from {
+	    transform: rotate(0deg);
+	  }
+	  to {
+	    transform: rotate(360deg);
+	  }
+	}
+c5db1be4058f131ada584227e0a505a7|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/App.js|4|1|V|javascript
+	function App() {
+6d1113ba2b9fa2a9bb0499d713635fec|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/FormLevelValidation.js|40|20|v|javascript
+	""></
+3fcdb73d36d54f2cc22d0f68e6b6e182|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/FormLevelValidation.js|40|34|v|javascript
+	form
+de853a6e00aba95d7f262a833e74f01b|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/FormLevelValidation.js|37|5|V|javascript
+			  Field
+857ab769d1fe14b710d73c1ad8a07546|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/FormLevelValidation.js|37|5|V|javascript
+			  <Field type:
+1688e7eeec3a32af813c2c148c5149ef|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/FormLevelValidation.js|36|10|V|javascript
+			  <label htmlFor="name"></label>
+	
+3b1ba84c8c2e657af30456337ab3fe7e|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/App.js|5|1|V|javascript
+	class App extends Component {
+72bc04716f22f7be6390002f09ef17c7|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/App.js|6|12|V|javascript
+	  render() {
+ac67ede5a84eb5a1add7ff4440e9a485|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/FormLevelValidation.js|23|25|v|javascript
+	required
+1d234c5d86e31964fd8e19247f52b264|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/formik-field-validators/src/FormLevelValidation.js|1|1|V|javascript
+	import { Formik, ErrorMessage, Field } from "formik";
+	import * as Yup from "yup";
+	import "./App.css";
+	
+	function validateName(value) {
+	  let error;
+	  if (!value) {
+	    error = "Name is Required";
+	  }
+	  return error;
+	}
+	
+	function validatePassword(value) {
+	  let error;
+	  if (!value) {
+	    error = "Password is Required";
+	  }
+	
+	  if (value.length < 8) {
+	    error = "Min length of Password 8 characters";
+	  }
+	  return error;
+	}
+	
+	const LoginSchema = Yup.object().shape({
+	  name: Yup.string().required("Required"),
+	  password: Yup.string().min(8, "8 characters required"),
+	});
+	
+	const FormLevelValidation = () => {
+	  return (
+	    <Formik
+	      validationSchema={LoginSchema}
+	      initialStatus={{ isValidating: false }}
+	      initialValues={{ name: "", password: "" }}
+	      onSubmit={(values, { setSubmitting, setStatus }) => {
+	        setStatus({ isValidating: true });
+	        setTimeout(() => {
+	          console.info(JSON.stringify(values, null, 2));
+	          setSubmitting(false);
+	          setStatus({ isValidating: false });
+	        }, 400);
+	      }}
+	    >
+	      {({ handleChange, handleBur, handleSubmit, isSubmitting }) => (
+	        <form onSubmit={handleSubmit}>
+	          <label htmlFor="name">
+	            Name:
+	            <Field
+	              type="text"
+	              name="name"
+	              id="name"
+	              validate={validateName}
+	              onBlur={handleBur}
+	              onChange={handleChange}
+	            />
+	          </label>
+	          <ErrorMessage name="name" className="error" component="span" />
+	          <label htmlFor="password">
+	            Password:
+	            <Field
+	              type="password"
+	              name="password"
+	              id="password"
+	              validate={validatePassword}
+	              onBlur={handleBur}
+	              onChange={handleChange}
+	            />
+	          </label>
+	          <ErrorMessage name="password" className="error" component="span" />
+	          <input type="submit" value="Login" disabled={isSubmitting} />
+	        </form>
+	      )}
+	    </Formik>
+	  );
+	};
+	
+	export default FormLevelValidation;
+4ddec10f9fa7d777aed057310ad7d38f|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/control-schema-validation/src/FormValidationControl.js|25|1|V|javascript
+	const LoginSchema = Yup.object().shape({
+	  name: Yup.string().required("Required"),
+	  password: Yup.string().min(8, "8 characters required"),
+	});
+8d7b8450ba50cdad1f59c3f8246132d2|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/control-schema-validation/src/FormValidationControl.js|28|1|V|javascript
+	      validationSchema={LoginSchema}
+eeadf3a70c53556d4958a76eb4b214a4|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/control-schema-validation/src/FormValidationControl.js|50|23|v|javascript
+	handleBur
+50575620b035a09429c7cf5b25d0ace4|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/control-schema-validation/src/FormValidationControl.js|60|25|v|javascript
+	handleChange
+b068931cc450442b63f5b3d276ea4297|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/control-schema-validation/src/FormValidationControl.js|62|31|v|javascript
+	name
+70ccb627327c3df2d6aaf923c38ad3d0|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/control-schema-validation/src/FormValidationControl.js|74|15|V|javascript
+	              onBlur={handleBlur}
+06bb5b3914d74887f1be2e343a73dc04|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activiy-8-formik-form/src/App.js|5|1|V|javascript
+	    <div className="App">
+	      <header className="App-header">
+	        <img src={logo} className="App-logo" alt="logo" />
+	        <p>
+	          Edit <code>src/App.js</code> and save to reload.
+	        </p>
+	        <a
+	          className="App-link"
+	          href="https://reactjs.org"
+	          target="_blank"
+	          rel="noopener noreferrer"
+	        >
+	          Learn React
+	        </a>
+	      </header>
+fb1fa908f69e24fbc9134e32976b23a5|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activiy-8-formik-form/src/UserRegistrationForm.js|1|34|V|javascript
+	import { Component } from "react";
+c1cbfe271a40788a00e8bf8574d94d4b|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activiy-8-formik-form/src/UserRegistrationForm.js|15|16|v|javascript
+	handler
+68e90bc640e0e5e14f17750277013e77|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activiy-8-formik-form/src/UserRegistrationForm.js|23|1|V|javascript
+	    .test("Email unique", "Email already registered", (value) => {
+	      return sleep(200).then(() => {
+	        if (
+	          [
+	            "vganesh@mac.com",
+	            "guialbun@msn.com",
+	            "nasarius@optonline.net",
+	            "scato@icloud.net",
+	            "dwheeler@optonline.net",
+	          ].includes(value)
+	        ) {
+	          return Promise.resolve(false);
+	        } else {
+	          return Promise.resolve(true);
+	        }
+	      });
+	    }),
+f38aa86c58115052fb4fc65f023fbeed|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activiy-8-formik-form/src/UserRegistrationForm.js|9|1|V|javascript
+	  name: Yup.string()
+	    .min(6, "Username must be greater than 6 characters")
+	    .max(24, "Username must be shorter than 24 characters")
+	    .required("Required"),
+	  password: Yup.string()
+	    .min(8, "Password must be greater than 8 characters")
+	    .require("Required")
+	    .matches(
+	      /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/,
+	      "At least one lowercase and one uppercase char required"
+	    ),
+	  email: Yup.string()
+	    .min("Valid email required")
+	    .required("Required")
+	    .test("Email unique", "Email already registered!", (value) => {
+	      return sleep(200).then(() => {
+	        if (
+	          [
+	            "vganesh@mac.com",
+	            "guialbu@msn.com",
+	            "nasarius@optonline.net",
+	            "scato@icloud.com",
+	            "dwheeler@optonline.net",
+	          ].includes(value)
+	        ) {
+	          return Promise.resolve(false);
+	        } else {
+	          return Promise.resolve(true);
+	        }
+	      });
+	    }),
+	  acceptTAC: Yup.boolean().test(
+	    "TAC Accepted",
+	    "TAC needs to be accepted",
+	    (value) => !!value
+	  ),
+11f3d131f5d02ce17d78a784c6e3c34c|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.js|1|1|V|javascript
+	import "./App.css";
+5c8c01b3eff1066d318d8a8fb0580ca3|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.js|7|35|v|javascript
+	(resolve, reject) =>
+c1c425268e68385d1ab5074c17a94f14|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.js|57|1|v|javascript
+	function
+547600a83b6593bbafec7b121681a846|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.js|82|6|V|javascript
+				  <Field  />
+b103699282b55ca893b577911b9ecff9|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.js|100|6|V|javascript
+				  label
+57cb0348caca914bc03325d66d16264b|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.js|100|6|V|javascript
+				  <label htmlFor="e"></label>
+0b3666177a4a549577ac869cf08f1ec1|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|3|14|v|css
+	880px
+c7c6a7b0e9e4b4100ce07117bd8524dd|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|3|14|v|css
+	28px
+5ffc45c7a6127c4ceb331d18ac19ace0|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|11|25|v|css
+	scroll/fixed
+e1f10cf51dfee605daf99902257ceeab|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|11|2|V|css
+		background-attachment: ;
+99c483e1d11b1a279a2a1a3960528487|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|15|12|v|css
+	relative
+75509cccda07b9ca5d09baaa2755841a|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|20|12|v|css
+	100px
+9255ab223e9f8731e085a79c6019c74b|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|37|3|V|css
+	  border-radius: 2%;
+adb115059e28d960fa8badfac5516667|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|37|15|v|css
+	center
+9481987297fae55597cf4dbcd4205986|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|20|12|v|css
+	50px;
+aabbe74211fbb2d735f7ac400c05b2f4|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|38|12|v|css
+	10px
+3446a02a0ccdf916fe7a53ef5b92be2c|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|39|10|v|css
+	350px
+d180c5abb21a5b4620893f88c028e494|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|44|1|V|css
+	input[type="text"]:focus {
+	  background: none;
+	  border: none;
+	  color: black;
+	}
+2a9cc507e1b55930e2f81af5bda7d792|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/activity-8-formik/src/App.css|78|1|V|css
+	.errors {
+	  color: red;
+	}
+d3c87bcd3c574c89187894ff0d5350de|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Lists.py|2|1|V|python
+	print(shopping[0])
+a36307dada3d47b4e1792dc4ddaaabb9|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Lists.py|7|1|V|python
+	print)
+21b72c0b7adc5c7b4a50ffcb90d92dd6|file:///home/maky/Programming/PythonWorkShop/PythonStructures/NestedLists.py|10|16|v|python
+	matrix
+3452916de7c955bbb6bb3ed8458aab5d|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity6_NestedList.py|6|1|V|python
+	    for row in employees:
+	        for col in row:
+	            print(i)
+	            print(col)
+d1e000f73a9d21a50d4593be42c03499|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity6_NestedList.py|5|19|V|python
+	for i in employees:
+582ca3f7cbaf4edcc1b445f8ea90b503|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity6_NestedList.py|6|9|V|python
+	employees
+641f28a60a2d9fd9474cb7fd8e5dc5f7|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity6_NestedList.py|7|5|V|python
+	    print(i)
+b24c445dc8abf0abc55819d7be0b7088|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity6_NestedList.py|14|1|V|python
+	    j += 1
+e22c5aa4bbb07e5d8f4e332c848aded1|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity6_NestedList.py|10|1|V|python
+	        j += 1
+02de183ad94c1445a001eeb5522e7955|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity6_NestedList.py|5|1|V|python
+	print(employees[1])
+	for i in employees[1]:
+	    if(i == employees[1][0]):
+	        print("Name:", i)
+	    elif(i == employees[1][1]):
+	        print("Age:", i)
+	    else:
+	        print("Deparment:", i)
+6fac07bd93856a2a141bfd78592614b5|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity6_NestedList.py|6|5|V|python
+	    prin)
+8d8654a794e2f91c7cdf4aad10fab597|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|9|1|V|python
+	for i in range(len(X)):
+	    # iterate through columns
+	    for j in range(len(X[0])):
+	        result[i][j] = X[i][j] + Y[i][j]
+	
+	print(result)
+ac175b7cf83b72863bdfe8fcd1d621ad|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|5|1|V|python
+	result = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+0552aa48b9b32b10323d3b8fe6425988|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|1|1|V|python
+	X = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+	Y = [[10, 11, 12], [13, 14, 15], [16, 17, 18]]
+bec184fc98023adb6646571f71fa9503|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|18|1|V|python
+	# Substraction
+a0472218e547bb4ffd399abaf84e8024|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|24|9|V|python
+	        print(X[0])
+059e4af1415bc7956290535600263902|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|24|21|V|python
+	        print(len(X[0]))
+a471ac7d3301c698e97a9ee63858afa6|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|26|1|V|python
+	print("Substraction:", result)
+f90a6d0999e9896039a2d31f599d0a2c|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|31|1|V|python
+	result = [[]]
+f57286fdced60d1cc76871913c3d217f|file:///home/maky/Programming/PythonWorkShop/PythonStructures/MatrixOperations.py|43|1|V|python
+	print("Multiplication:", result)
+b2fe440cb7a0b127f1a90ffea296313b|file:///home/maky/Programming/PythonWorkShop/PythonStructures/BasicListOperations.py|3|11|v|python
+	shopping
+b894e51930cc614b62a9c6ef0514acd4|file:///home/maky/Programming/PythonWorkShop/PythonStructures/BasicListOperations.py|12|1|V|python
+	print(list3*3)
+a7db4ad05cc5b1701d1dfcde72f98115|file:///home/maky/Programming/PythonWorkShop/PythonStructures/BasicListOperations.py|12|1|V|python
+	list4 = list3*3
+b42f1df995c1cbecda08687364545202|file:///home/maky/Programming/PythonWorkShop/PythonStructures/BasicListOperations.py|12|7|v|python
+	list4
+85973d76cc41f9ff20f93be9bb67bc92|file:///home/maky/Programming/PythonWorkShop/PythonStructures/DictionaryKeysAndValues.py|15|15|V|python
+	    "year": 182
+84cdc76cabf41bd7c961f6ab12f117d8|file:///home/maky/Programming/PythonWorkShop/PythonStructures/DictionaryKeysAndValues.py|18|14|v|python
+	year
+2ac51a699d30b40c69aac4c00450a27b|file:///home/maky/Programming/PythonWorkShop/PythonStructures/DictionaryKeysAndValues.py|22|1|V|python
+	print(movie)
+	
+691d502cfd0e0626cd3b058e5682ad1c|file:///home/maky/Programming/PythonWorkShop/PythonStructures/DictionaryKeysAndValues.py|20|28|v|python
+	items
+b3aa25abb88505e87cbe9965ed7155d6|file:///home/maky/Programming/PythonWorkShop/PythonStructures/DictionaryKeysAndValues.py|34|1|V|python
+	print(movie)
+9e1d6b58c3d27147e6a03ec54b471100|file:///home/maky/Programming/PythonWorkShop/PythonStructures/DictionaryKeysAndValues.py|34|1|V|python
+	for i in movie:
+295c73138931bf1c8ed9b1cd13cfc322|file:///home/maky/Programming/PythonWorkShop/PythonStructures/DictionaryKeysAndValues.py|34|1|V|python
+	cc
+	    print(i)
+0e6cde2440071fe9afa2f89bfc929a3f|file:///home/maky/Programming/PythonWorkShop/PythonStructures/DictionaryKeysAndValues.py|32|17|v|python
+	"English"
+9ed083b1436e5f40ef984b28255eef18|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity7_UsingListAndDictionaries.py|4|20|v|python
+	sales
+773a6e8c0c2d647957be351ae07e050d|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity7_UsingListAndDictionaries.py|17|17|v|python
+	'name'
+5eba2fc0bd40da449830bde9abd6580c|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity7_UsingListAndDictionaries.py|20|1|V|python
+	    print("Name": employee["name"])
+70fd7bb3a3458429495a41d4f387b1da|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity7_UsingListAndDictionaries.py|20|1|V|python
+	    print("Name:", employee["name"])
+49ee3087348e8d44e1feda1917443987|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity7_UsingListAndDictionaries.py|21|12|v|python
+	Name
+5b8acbc8f0fc341e5f5c4f1895fd09bb|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Activity7_UsingListAndDictionaries.py|23|12|v|python
+	-----------
+12c500ed0b7879105fb46af0f246be87|file:///home/maky/Programming/PythonWorkShop/PythonStructures/ZipAndUnzippingDictionary.py|6|7|v|python
+	orders
+722c367695e20aa37fb7a5e4bdfcf0c7|file:///home/maky/Programming/PythonWorkShop/PythonStructures/ZipAndUnzippingDictionary.py|11|11|V|python
+	print(orders)
+62b6c6e71201d8771d6e92a1e71a56f5|file:///home/maky/Programming/PythonWorkShop/PythonStructures/ZipAndUnzippingDictionary.py|11|19|V|python
+	print(type(orders))
+49ba87a8f097f557b8529a4cb0d8cc37|file:///home/maky/Programming/PythonWorkShop/PythonStructures/ZipAndUnzippingDictionary.py|16|7|v|python
+	dict(orders)
+d0d33c63402dfb2c02713a7fd52578c1|file:///home/maky/Programming/PythonWorkShop/PythonStructures/ZipAndUnzippingDictionary.py|20|6|V|python
+	print()
+6c0c09061d1158e5075b650fb2f763b2|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Tuples.py|9|7|v|python
+	len(t)
+630c18ca6b28dc0b53a26f0be63c813d|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Tuples.py|11|1|V|python
+	t.append("appe")
+86a5adba513fdb17ce9940a0a364af79|file:///home/maky/Programming/PythonWorkShop/PythonStructures/Tuples.py|11|1|V|python
+	t[2] = "apple"
+6d3463237aff1e233499a5b77733a7bb|file:///home/maky/Programming/PythonWorkShop/PythonStructures/SetsOperations.py|6|17|V|python
+	print(s5.union(s6))
+f7531e2d0ea27233ce00b5f01c5bf335|file:///home/maky/Programming/PythonWorkShop/PythonStructures/SetsOperations.py|10|1|V|python
+	print
+e0ab9f7746eaca5e533f0380b91f659e|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/FirstScript.py|2|1|V|python
+	/usr/bin/env python
+cbeb4ee02440e643720149801c81885d|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/myModule.py|2|1|V|python
+	""" This script computes the sum of the factorial of a list of numbers """
+8c1321e57a895fdc3dac57cc782136be|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/myModule.py|5|1|V|python
+	    """ This script computes the sum of the factorial of a list of numbers """
+ffa04217f44e4a2773e75640c9d63ad8|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/myModule.py|1|5|V|python
+	import math
+0f1d18d5f482ca5d54b0931b9c624da6|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/time.py|7|1|V|python
+	def currentTime():
+fded14a3da5c926b7461c39a503b3687|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/time.py|7|7|V|python
+	time = 
+dc5332ebcbf8ec8e0446edc96fdc0864|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/time.py|9|11|v|python
+	datetime.datetime.now()
+af0b8a8f4ca18574d2753958cb3c59b3|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/PythonAlgorithms.py|8|1|V|python
+	print(maximum)
+697794e45d1f5a8d81de85269d722747|file:///home/maky/.vimspector.json|26|17|v|json
+	<working directory>
+160301d199798c8f8acbee4305463997|file:///home/maky/.vimspector.json|15|1|V|json
+	        "program": "${fileDirname}/${fileBasenameNoExtension}.cpp.out",
+8a6f6165db6199348f66e82eca375e3f|file:///home/maky/.vimspector.json|30|9|V|json
+	        "program": "<path to main python file>"
+5a43539854dc44e4ff9e62d7a870bf83|file:///home/maky/.vimspector.json|21|19|v|json
+	vscode-python
+3d9fa0b7efddc5997b97fed894b84d81|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/BubbleSort.py|7|1|V|python
+	    for i in range(len(l) - 1):
+	        if l[i] > l[i+1]:
+68934a3e9455fa72420237eb05902327|file:///home/maky/.config/nvim/plug-config/barbar.vim|7|26|v|vim
+	false
+030a465082d28c6bb7e1602be9ce5f44|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/LinearSearch.py|1|13|V|python
+	import random
+10ae9fc7d453b0dd525d0edf2ede7961|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/BinarySearch.py|17|35|v|python
+	list
+242a98bbe77e45e7455e0a98ec6007d3|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/BinarySearch.py|21|13|V|python
+	print(found)
+	print(location)
+37e2e19752bd1bb284d67a7a6189f8f9|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/BinarySearch.py|21|1|V|python
+	    print(list[location])
+c227a82b56284ffba75b034169be8b41|file:///home/maky/Programming/PythonWorkShop/ExecutingPython-Programs-Algorithms-Functions/BinarySearch.py|20|1|V|python
+	    print(found)
+daf25d10f30af61b0ed5abd7ad4d235f|file:///home/maky/WebDevelopment/TailwindCSS/index.html|5|39|v|html
+	device-width
+5eddeec8dc97f8d6911e5d1d7c31348f|file:///home/maky/WebDevelopment/TailwindCSS/index.html|10|5|V|html
+	    <h1 class="">Hi</h1>
+4ff3f44977a8cb638fde5086721b57b6|file:///home/maky/WebDevelopment/TailwindCSS/index.html|10|37|v|html
+	text-cyan-500
+6e155e45273e4ce87143cbdd6c33d5c0|file:///home/maky/WebDevelopment/TailwindCSS/index.html|10|37|v|html
+	text-left
+a2f2ed4f8ebc2cbb4c21a29dc40ab61d|file:///home/maky/WebDevelopment/TailwindCSS/index.html|14|5|v|html
+	class
+811882fecd5c7618d7099ebbd39ea254|file:///home/maky/WebDevelopment/TailwindCSS/index.html|14|21|v|html
+	left
+7c4f29407893c334a6cb7a87bf045c0d|file:///home/maky/WebDevelopment/TailwindCSS/index.html|14|21|v|html
+	right
+04430e86a962a01795b6559480628093|file:///opt/lampp/htdocs/Template/dist/index.php|87|1|V|php
+						<div class="card" style="min-height:500px;">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+						</div>
+2a701329017ebd6db67f35982d94b963|file:///opt/lampp/htdocs/Template/dist/index.php|88|1|V|php
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+b404a18f77f4c8a4a1759f6186c83d37|file:///opt/lampp/htdocs/Template/dist/index.php|79|1|V|php
+		<div class="pc-container">
+	
+	
+			<div class="container">
+				<div class="row">
+					<!-- my content start -->
+					<div class="col-md-12 mt-5">
+	
+						<div class="card" style="min-height:500px;">
+							<form action="upload.php" method="post" enctype="multipart/form-data">
+								Select image to upload:
+								<input type="file" name="fileToUpload" id="fileToUpload">
+								<input type="submit" value="Upload Image" name="submit">
+							</form>
+						</div>
+					</div>
+	
+					<!-- my content end -->
+	
+				</div>
+				<header class="pc-header ">
+					<?php require("footer.php"); ?>
+				</header>
+	
+			</div>
+	
+	
+	
+	
+	
+		</div>
+fd3bc7915eae76b107ef49fa878b8fe1|file:///opt/lampp/htdocs/Template/dist/process_upload.php|1|1|V|php
+		<div class="pc-container">
+aadbf4416d6e4ab567bd5937e1932df9|file:///opt/lampp/htdocs/Template/dist/process_upload.php|30|1|V|php
+		</div>
+5cfecc0d282fd7d1dae0a7fe79d4b246|file:///opt/lampp/htdocs/Template/dist/process_upload.php|1|1|V|php
+	<div class="container">
+		<div class="row">
+			<!-- my content start -->
+			<div class="col-md-12 mt-5">
+	
+				<div class="card" style="min-height:500px;">
+					<form action="upload.php" method="post" enctype="multipart/form-data">
+						Select image to upload:
+						<input type="file" name="fileToUpload" id="fileToUpload">
+						<input type="submit" value="Upload Image" name="submit">
+					</form>
+				</div>
+			</div>
+	
+			<!-- my content end -->
+	
+		</div>
+		<header class="pc-header ">
+			<?php require("footer.php"); ?>
+		</header>
+	
+	</div>
+d03d3f695e44cff9264868195f6d4c40|file:///opt/lampp/htdocs/Template/dist/index.php|85|1|V|php
+					<div class="col-md-12 mt-5">
+	
+						<div class="card" style="min-height:500px;">
+							<form action="upload.php" method="post" enctype="multipart/form-data">
+								Select image to upload:
+								<input type="file" name="fileToUpload" id="fileToUpload">
+								<input type="submit" value="Upload Image" name="submit">
+							</form>
+						</div>
+					</div>
+15905c7cf2f7a7ced569be67e398c2be|file:///opt/lampp/htdocs/Template/dist/process_upload.php|1|1|V|php
+	<div class="col-md-12 mt-5">
+	
+		<div class="card" style="min-height:500px;">
+			<form action="process_upload.php" method="post" enctype="multipart/form-data">
+				Select image to upload:
+				<input type="file" name="fileToUpload" id="fileToUpload">
+				<input type="submit" value="Upload Image" name="submit">
+			</form>
+		</div>
+	</div>
+	
+	<?php
+	$target_dir = "uploads/";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+	
+	// Check if image file is a actual image or fake image
+	if (isset($_POST["submit"])) {
+		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+		if ($check !== false) {
+			echo "File is an image - " . $check["mime"] . ".";
+			$uploadOk = 1;
+		} else {
+			echo "File is not an image.";
+			$uploadOk = 0;
+		}
+	}
+	
+	// Check if file already exists
+	if (file_exists($target_file)) {
+		echo "Sorry, file already exists.";
+		$uploadOk = 0;
+	}
+	
+	// Check file size
+	if ($_FILES["fileToUpload"]["size"] > 500000) {
+		echo "Sorry, your file is too large.";
+		$uploadOk = 0;
+	}
+	
+	// Allow certain file formats
+	if (
+		$imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+		&& $imageFileType != "gif"
+	) {
+		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+		$uploadOk = 0;
+	}
+	
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 0) {
+		echo "Sorry, your file was not uploaded.";
+		// if everything is ok, try to upload file
+	} else {
+		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+			echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+		} else {
+			echo "Sorry, there was an error uploading your file.";
+		}
+	}
+	?>
+cbfa68ee41b9a9850b6526c30e7aa87c|file:///opt/lampp/htdocs/Template/dist/index.php|1|1|V|php
+	<!DOCTYPE html>
+	<html lang="en">
+	
+	<head>
+		<title>DashboardKit Bootstrap 5 Admin Template</title>
+		<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 11]>
+	    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    	<![endif]-->
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="DashboardKit is made using Bootstrap 5 design framework. Download the free admin template & use it for your project.">
+		<meta name="keywords" content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template">
+		<meta name="author" content="DashboardKit ">
+	
+	
+		<!-- Favicon icon -->
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+	
+		<!-- font css -->
+		<link rel="stylesheet" href="assets/fonts/feather.css">
+		<link rel="stylesheet" href="assets/fonts/fontawesome.css">
+		<link rel="stylesheet" href="assets/fonts/material.css">
+	
+		<!-- vendor css -->
+		<link rel="stylesheet" href="assets/css/style.css" id="main-style-link">
+	
+	</head>
+	
+	<body class="">
+		<!-- [ Pre-loader ] start -->
+		<div class="loader-bg">
+			<div class="loader-track">
+				<div class="loader-fill"></div>
+			</div>
+		</div>
+		<!-- [ Pre-loader ] End -->
+		<!-- [ Mobile header ] start -->
+		<div class="pc-mob-header pc-header">
+			<div class="pcm-logo">
+				<img src="assets/images/logo.svg" alt="" class="logo logo-lg">
+			</div>
+			<div class="pcm-toolbar">
+				<a href="#!" class="pc-head-link" id="mobile-collapse">
+					<div class="hamburger hamburger--arrowturn">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</a>
+				<a href="#!" class="pc-head-link" id="headerdrp-collapse">
+					<i data-feather="align-right"></i>
+				</a>
+				<a href="#!" class="pc-head-link" id="header-collapse">
+					<i data-feather="more-vertical"></i>
+				</a>
+			</div>
+		</div>
+		<!-- [ Mobile header ] End -->
+	
+		<!-- [ navigation menu ] start -->
+		<?php require("left_nav.php"); ?>
+	
+	
+		<!-- [ navigation menu ] end -->
+		<!-- [ Header ] start -->
+	
+		<header class="pc-header ">
+			<?php require("header.php"); ?>
+		</header>
+	
+		<!-- [ Header ] end -->
+	
+		<!-- [ Main Content ] start -->
+		<div class="pc-container">
+	
+	
+			<div class="container">
+				<div class="row">
+					<!-- my content start -->
+	
+					<?php require("process_upload.php") ?>
+	
+					<!-- my content end -->
+	
+				</div>
+				<header class="pc-header ">
+					<?php require("footer.php"); ?>
+				</header>
+	
+			</div>
+	
+	
+	
+	
+	
+		</div>
+		<!-- [ Main Content ] end -->
+		<!-- Warning Section start -->
+		<!-- Older IE warning message -->
+		<!--[if lt IE 11]>
+	        <div class="ie-warning">
+	            <h1>Warning!!</h1>
+	            <p>You are using an outdated version of Internet Explorer, please upgrade
+	               <br/>to any of the following web browsers to access this website.
+	            </p>
+	            <div class="iew-container">
+	                <ul class="iew-download">
+	                    <li>
+	                        <a href="http://www.google.com/chrome/">
+	                            <img src="assets/images/browser/chrome.png" alt="Chrome">
+	                            <div>Chrome</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+	                            <img src="assets/images/browser/firefox.png" alt="Firefox">
+	                            <div>Firefox</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.opera.com">
+	                            <img src="assets/images/browser/opera.png" alt="Opera">
+	                            <div>Opera</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="https://www.apple.com/safari/">
+	                            <img src="assets/images/browser/safari.png" alt="Safari">
+	                            <div>Safari</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+	                            <img src="assets/images/browser/ie.png" alt="">
+	                            <div>IE (11 & above)</div>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <p>Sorry for the inconvenience!</p>
+	        </div>
+	    <![endif]-->
+		<!-- Warning Section Ends -->
+		<!-- Required Js -->
+		<script src="assets/js/vendor-all.min.js"></script>
+		<script src="assets/js/plugins/bootstrap.min.js"></script>
+		<script src="assets/js/plugins/feather.min.js"></script>
+		<script src="assets/js/pcoded.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+		<!-- <script src="assets/js/plugins/clipboard.min.js"></script> -->
+		<!-- <script src="assets/js/uikit.min.js"></script> -->
+	
+		<!-- Apex Chart -->
+		<script src="assets/js/plugins/apexcharts.min.js"></script>
+	
+	
+		<!-- custom-chart js -->
+		<script src="assets/js/pages/dashboard-sale.js"></script>
+	</body>
+	
+	</html>
+97cefd169795965c924f6345d7961480|file:///opt/lampp/htdocs/Template/dist/index.php|86|1|V|php
+					<?php require("process_upload.php") ?>
+457af480006da4f8b951ed4e114db16d|file:///opt/lampp/htdocs/Template/dist/index.php|86|1|V|php
+					</div>
+41fcbfb11bc4f0e57b61b6e9592c385b|file:///opt/lampp/htdocs/Template/dist/index.php|1|1|V|php
+	<!DOCTYPE html>
+	<html lang="en">
+	
+	<head>
+		<title>DashboardKit Bootstrap 5 Admin Template</title>
+		<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 11]>
+	    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    	<![endif]-->
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="DashboardKit is made using Bootstrap 5 design framework. Download the free admin template & use it for your project.">
+		<meta name="keywords" content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template">
+		<meta name="author" content="DashboardKit ">
+	
+	
+		<!-- Favicon icon -->
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+	
+		<!-- font css -->
+		<link rel="stylesheet" href="assets/fonts/feather.css">
+		<link rel="stylesheet" href="assets/fonts/fontawesome.css">
+		<link rel="stylesheet" href="assets/fonts/material.css">
+	
+		<!-- vendor css -->
+		<link rel="stylesheet" href="assets/css/style.css" id="main-style-link">
+	
+	</head>
+	
+	<body class="">
+		<!-- [ Pre-loader ] start -->
+		<div class="loader-bg">
+			<div class="loader-track">
+				<div class="loader-fill"></div>
+			</div>
+		</div>
+		<!-- [ Pre-loader ] End -->
+		<!-- [ Mobile header ] start -->
+		<div class="pc-mob-header pc-header">
+			<div class="pcm-logo">
+				<img src="assets/images/logo.svg" alt="" class="logo logo-lg">
+			</div>
+			<div class="pcm-toolbar">
+				<a href="#!" class="pc-head-link" id="mobile-collapse">
+					<div class="hamburger hamburger--arrowturn">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</a>
+				<a href="#!" class="pc-head-link" id="headerdrp-collapse">
+					<i data-feather="align-right"></i>
+				</a>
+				<a href="#!" class="pc-head-link" id="header-collapse">
+					<i data-feather="more-vertical"></i>
+				</a>
+			</div>
+		</div>
+		<!-- [ Mobile header ] End -->
+	
+		<!-- [ navigation menu ] start -->
+		<?php require("left_nav.php"); ?>
+	
+	
+		<!-- [ navigation menu ] end -->
+		<!-- [ Header ] start -->
+	
+		<header class="pc-header ">
+			<?php require("header.php"); ?>
+		</header>
+	
+		<!-- [ Header ] end -->
+	
+		<!-- [ Main Content ] start -->
+		<div class="pc-container">
+	
+	
+			<div class="container">
+				<div class="row">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<!-- my content start -->
+	
+						<form action="process_upload.php" method="post" enctype="multipart/form-data">
+							Select image to upload:
+							<input type="file" name="fileToUpload" id="fileToUpload">
+							<input type="submit" value="Upload Image" name="submit">
+						</form>
+	
+						<!-- my content end -->
+	
+					</div>
+				</div>
+				<header class="pc-header ">
+					<?php require("footer.php"); ?>
+				</header>
+	
+			</div>
+	
+	
+	
+	
+	
+		</div>
+		<!-- [ Main Content ] end -->
+		<!-- Warning Section start -->
+		<!-- Older IE warning message -->
+		<!--[if lt IE 11]>
+	        <div class="ie-warning">
+	            <h1>Warning!!</h1>
+	            <p>You are using an outdated version of Internet Explorer, please upgrade
+	               <br/>to any of the following web browsers to access this website.
+	            </p>
+	            <div class="iew-container">
+	                <ul class="iew-download">
+	                    <li>
+	                        <a href="http://www.google.com/chrome/">
+	                            <img src="assets/images/browser/chrome.png" alt="Chrome">
+	                            <div>Chrome</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+	                            <img src="assets/images/browser/firefox.png" alt="Firefox">
+	                            <div>Firefox</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.opera.com">
+	                            <img src="assets/images/browser/opera.png" alt="Opera">
+	                            <div>Opera</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="https://www.apple.com/safari/">
+	                            <img src="assets/images/browser/safari.png" alt="Safari">
+	                            <div>Safari</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+	                            <img src="assets/images/browser/ie.png" alt="">
+	                            <div>IE (11 & above)</div>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <p>Sorry for the inconvenience!</p>
+	        </div>
+	    <![endif]-->
+		<!-- Warning Section Ends -->
+		<!-- Required Js -->
+		<script src="assets/js/vendor-all.min.js"></script>
+		<script src="assets/js/plugins/bootstrap.min.js"></script>
+		<script src="assets/js/plugins/feather.min.js"></script>
+		<script src="assets/js/pcoded.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+		<!-- <script src="assets/js/plugins/clipboard.min.js"></script> -->
+		<!-- <script src="assets/js/uikit.min.js"></script> -->
+	
+		<!-- Apex Chart -->
+		<script src="assets/js/plugins/apexcharts.min.js"></script>
+	
+	
+		<!-- custom-chart js -->
+		<script src="assets/js/pages/dashboard-sale.js"></script>
+	</body>
+	
+	</html>
+cacdbf8bb0aa719c5b435c74759e1838|file:///opt/lampp/htdocs/Template/dist/process_upload.php|1|1|V|php
+	<?php
+	$target_dir = "uploads/";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+	
+	// Check if image file is a actual image or fake image
+	if(isset($_POST["submit"])) {
+	  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+	  if($check !== false) {
+	    echo "File is an image - " . $check["mime"] . ".";
+	    $uploadOk = 1;
+	  } else {
+	    echo "File is not an image.";
+	    $uploadOk = 0;
+	  }
+	}
+	
+	// Check if file already exists
+	if (file_exists($target_file)) {
+	  echo "Sorry, file already exists.";
+	  $uploadOk = 0;
+	}
+	
+	// Check file size
+	if ($_FILES["fileToUpload"]["size"] > 500000) {
+	  echo "Sorry, your file is too large.";
+	  $uploadOk = 0;
+	}
+	
+	// Allow certain file formats
+	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+	&& $imageFileType != "gif" ) {
+	  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+	  $uploadOk = 0;
+	}
+	
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 0) {
+	  echo "Sorry, your file was not uploaded.";
+	// if everything is ok, try to upload file
+	} else {
+	  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+	    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+	  } else {
+	    echo "Sorry, there was an error uploading your file.";
+	  }
+	}
+fd34ce8562c6360481edce1326040604|file:///opt/lampp/htdocs/Template/dist/upload.php|88|1|V|php
+						<form action="process_upload.php" method="post" enctype="multipart/form-data">
+							Select image to upload:
+							<input type="file" name="fileToUpload" id="fileToUpload">
+							<input type="submit" value="Upload Image" name="submit">
+						</form>
+1d565b9e5303987bb1b1938d5d458bca|file:///opt/lampp/htdocs/Template/dist/upload.php|85|29|v|php
+	Card
+779070c49cc43505d501b4e1af189252|file:///opt/lampp/htdocs/Template/dist/upload.php|104|1|V|php
+						$target_dir = "uploads/";
+						$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+						$uploadOk = 1;
+						$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+	
+						// Check if image file is a actual image or fake image
+						if (isset($_POST["submit"])) {
+							$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+							if ($check !== false) {
+								echo "File is an image - " . $check["mime"] . ".";
+								$uploadOk = 1;
+							} else {
+								echo "File is not an image.";
+								$uploadOk = 0;
+							}
+						}
+	
+						// Check if file already exists
+						if (file_exists($target_file)) {
+							echo "Sorry, file already exists.";
+							$uploadOk = 0;
+						}
+	
+						// Check file size
+						if ($_FILES["fileToUpload"]["size"] > 500000) {
+							echo "Sorry, your file is too large.";
+							$uploadOk = 0;
+						}
+	
+						// Allow certain file formats
+						if (
+							$imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+							&& $imageFileType != "gif"
+						) {
+							echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+							$uploadOk = 0;
+						}
+	
+						// Check if $uploadOk is set to 0 by an error
+						if ($uploadOk == 0) {
+							echo "Sorry, your file was not uploaded.";
+							// if everything is ok, try to upload file
+						} else {
+							if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+								echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+							} else {
+								echo "Sorry, there was an error uploading your file.";
+							}
+						} ?>
+	
+8977f2b35d5c8f8af55f45ab23e80d46|file:///opt/lampp/htdocs/Template/dist/upload.php|103|1|V|php
+						<?php
+943bbf5a31c6706ffa1604b8165f7093|file:///opt/lampp/htdocs/Template/dist/process_upload.php|1|1|V|php
+	<?php
+	$target_dir = "uploads/";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+	
+	// Check if image file is a actual image or fake image
+	if (isset($_POST["submit"])) {
+		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+		if ($check !== false) {
+			echo "File is an image - " . $check["mime"] . ".";
+			$uploadOk = 1;
+		} else {
+			echo "File is not an image.";
+			$uploadOk = 0;
+		}
+	}
+	
+	// Check if file already exists
+	if (file_exists($target_file)) {
+		echo "Sorry, file already exists.";
+		$uploadOk = 0;
+	}
+	
+	// Check file size
+	if ($_FILES["fileToUpload"]["size"] > 500000) {
+		echo "Sorry, your file is too large.";
+		$uploadOk = 0;
+	}
+	
+	// Allow certain file formats
+	if (
+		$imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+		&& $imageFileType != "gif"
+	) {
+		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+		$uploadOk = 0;
+	}
+	
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 0) {
+		echo "Sorry, your file was not uploaded.";
+		// if everything is ok, try to upload file
+	} else {
+		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+			echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+		} else {
+			echo "Sorry, there was an error uploading your file.";
+		}
+	}
+d508fe45cecaf653904a0e774084bb5c|file:///opt/lampp/htdocs/farmstand/styles/NewMarketPlace.css|25|21|v|css
+	white
+d22c03aa6e8244d746457872210d6267|file:///home/maky/WebDevelopment/Test/index.html|10|1|V|html
+	    <p>How many check boxed do you?</p>
+	    <input type="radio" name="rad" value="one" onclick="showOne();" /> None
+	    <input type="radio" name="rad" value="two" onclick="showTwo();" /> Two
+	
+	    <div class="hide" id="div1">
+	      <hr />
+	      <p>Okay cool</p>
+	    </div>
+	    <script src="script.js"></script>
+48238b06472fc71b0f5ba33fc836d28e|file:///home/maky/WebDevelopment/Test/style.css|1|1|V|css
+	body {
+	  font-family: arial;
+	}
+	
+	.hide {
+	  display: none;
+	}
+	
+	p {
+	  font-weight: bold;
+	}
+1e7b8f9bd86e9140f8215457c21600f0|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router/src/App.js|3|1|V|javascript
+	function App() {
+	  return <div className="App"></div>;
+	}
+0a9f8e62e0d3e574f48af9e665fc29b4|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router/src/App.js|7|15|V|javascript
+	export default App;
+82437135d09665cbc502b5253d291629|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router/src/App.js|4|2|V|javascript
+		<div>
+37b3657d3259bc81564772add580c945|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router/src/App.js|5|1|V|javascript
+			</div>
+b6f88f51c75c62b95943a08943e59b02|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router/src/App.js|28|1|V|javascript
+	const About = () => (
+		return(
+			<div className="About">
+	
+			</div>
+		)
+	)
+d27415352f5dc30d77aa1e244ffc939b|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router/src/App.js|5|1|V|javascript
+	  const About = () => (
+	    <div className="About">
+	      <h1>About Page</h1>
+	      <hr />
+	      <p>Information about your app or who you are would go here</p>
+	    </div>
+	  );
+30a2d095a7256e380eee31b1efd5a53d|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router-example/src/App.js|6|1|V|javascript
+	      <header className="App-header"> <img src={logo} className="App-logo" alt="logo" />
+	        <p>
+	          Edit <code>src/App.js</code> and save to reload.
+	        </p>
+	        <a
+	          className="App-link"
+	          href="https://reactjs.org"
+	          target="_blank"
+	          rel="noopener noreferrer"
+	        >
+	          Learn React
+	        </a>
+	      </header>
+9cb634fab699ff21b550d8416e2c07b4|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router-example/src/App.js|7|1|V|javascript
+	  return <div className="App"></div>;
+c90ef1de0d5ae078c5fe504629d28021|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router-example/src/App.js|12|11|V|javascript
+	          >
+51436d465afff159abe0baca886405f3|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router-example/src/App.js|9|4|V|javascript
+		  Route
+2262f976de8db590676f211f6edf07cc|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router-example/src/App.js|31|3|V|javascript
+	  c;
+9bc7da2e4224702c0ad88b140b7ca1bb|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router-example/src/App.js|33|2|V|javascript
+		return(div.Search)
+2ce3db86c8a7d2323c853c8bb2894ce9|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router-example/src/App.js|29|1|V|javascript
+	
+	// const Search = () => {
+4a0519e52664d7c30ba9a350c1d75a75|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/router-example/src/App.js|2|1|V|javascript
+	import { useLocation } from "react-router-dom";
+057fb1de97653ad04962cead66421743|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/search/src/App.js|10|3|V|javascript
+			Router({})
+bbc155fb2b111bf61c4f5ff892915e6b|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/search/src/App.js|10|11|v|javascript
+	Switch
+f7a2717498afe6e43818372335dc4c00|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/search/src/App.js|30|1|V|javascript
+	
+	const Items = [
+	  "Lorem Ipsum",
+	  "Ipsum Dipsum",
+	  "Foo Bar",
+	  "A little black cat",
+	  "A lazy fox",
+	  "A jumping dog",
+	];
+447b7147e84be512208dcc0995d67ebc|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/search/src/App.js|55|6|v|javascript
+	item
+5962b7afb7a65fa1a02759f787603d7c|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/search/src/App.js|35|18|V|javascript
+	  const term = "";
+8612d994b3db65ec775ef154ff4b4e66|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/search/src/App.js|41|9|V|javascript
+	        <li>No results.</li>
+2208c98e7f989e1eee047371fa0627d9|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/search/src/App.js|16|1|V|javascript
+	          <Route exact path="/">
+	            <Homepage />
+	          </Route>
+136251fcc23a266991f1ab27011b38ba|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/notfound/src/App.js|15|3|V|javascript
+				>
+815be97df65d6c4b510cd07189c5347a|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/notfound/src/App.js|17|14|v|javascript
+	attr
+7d1e935b0d7d7a36ea53ad026be9beef|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/notfound/src/App.js|17|4|V|javascript
+		  attrs : {  : 'val' },
+a036dbcdd934b1aba4258a10dcaa5ab0|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|2|10|v|javascript
+	useLocation
+bec106e4e0f9747c73c39f12b81877bf|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|16|2|V|javascript
+	
+		</div>
+34688afef9759b422fe814dc8733451d|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|40|2|V|javascript
+		<p>Please take back home</p>
+f177300c74e1c3f6d521bf6ef62f83fa|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|14|4|V|javascript
+		  <Navbar</Navbar>
+47b5da4e1acda2f507d73e6e4f5b4316|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|14|4|V|javascript
+		  Nav>
+23665fb1b7bbf4b33ca021bc33d189ad|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|14|4|V|javascript
+		  <N></N>
+711ca64540bd2bef2bf812fae327edb1|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|69|1|V|javascript
+	    &nbsp;
+16dc05cb40e6cb666023598867e7f581|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|70|1|V|javascript
+	    <Link to="/about">About</Link>
+d17ef418d9f7d40fd4fbb9a035003392|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|69|1|V|javascript
+	    &nbsp;
+	    <Link to="/about">About</Link>
+46b3931b9959c927df4fc65fdee94b07|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|70|16|v|javascript
+	about
+8f7f4c1ce7a4f933663d10543562b096|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|74|25|v|javascript
+	About
+c907a2bb93555c4b44ef3a9b6a5de108|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|19|1|V|javascript
+	          <Route path="/about">
+	            <About />
+	          </Route>
+e11c70f5eafc3c9840254d656024bd55|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|22|1|V|javascript
+	          <Route path="/bio">
+	            <Bio />
+	          </Route>
+	          <Route path="/contact">
+	            <Contact />
+	          </Route>
+2e50373d47a493de770e393048fea244|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|71|1|V|javascript
+	    &nbsp;
+	    <Link to="/bio">Bio</Link>
+	    &nbsp;
+	    <Link to="/contact">Contact</Link>
+5b34f3cefebfe02a36318c198f262a86|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|41|10|v|javascript
+	</Router>
+c993049746174b6a50415a99c7243cbe|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|53|9|V|javascript
+	cont {Vdk}
+ef43a399d523d0ed70827b2edd33d3e1|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|41|1|V|javascript
+		const {path, url} = useRouteMatch();
+bb79e469c840558ad18bd37563bf3f8e|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|40|1|V|javascript
+	const { path, url } = useRouteMatch();
+	
+8f6a31568fa78449b41b16fa52d53405|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|48|1|V|javascript
+	      <p>
+	        <a href="/">Please take me back home</a>
+	      </p>
+c328f3e9883a56893b4e649df5afde2d|file:///home/maky/WebDevelopment/LearnReact/ReactWorkshop/nested/src/App.js|55|3|V|javascript
+			Switch
+506b67e10b4ec1b154c6f594b7c1f8c2|file:///home/maky/.config/polybar/config|21|15|v|dosini
+	332222
+dfdb622a9b7fb61f8056b65cb32737b0|file:///home/maky/.config/polybar/config|21|15|v|dosini
+	5cbf89
+4e6a3c5ac5c2f197527e72c9c10a990d|file:///home/maky/.config/polybar/config|22|19|v|dosini
+	bf4444
+c10bddadd1786a8a12f96ae7db5bafb8|file:///home/maky/.config/polybar/config|22|18|v|dosini
+	light_green
+22f4110c19920af6c39699e7aa803f56|file:///home/maky/.config/polybar/config|88|21|v|dosini
+	1db954
+244cb54ef69f48806dc4b8d678f2ff3d|file:///home/maky/.config/polybar/config|88|21|v|dosini
+	1db954
+	
+c4e3b8b24c939b370dd67c35ec98df36|file:///home/maky/.config/polybar/config|22|19|v|dosini
+	b3b3a3
+ff985f541d976c2196d9cba6c9052948|file:///home/maky/.config/polybar/config|56|11|v|dosini
+	JetBrainsMono Nerd Font:size=16;4
+d92a8333dd3ccb895cc65f7455b71206|file:///home/maky/.config/polybar/config|56|11|v|dosini
+	Material
+1441df6b1c10f910ccdc400e40b5fce9|file:///home/maky/.config/polybar/config|56|11|v|dosini
+	Weather
+976470d93903a8298e257da783884e51|file:///home/maky/.config/polybar/config|56|11|v|dosini
+	Weather Icons:size=12;0
+49aa896715e83e66bbfe1e0c2380870a|file:///home/maky/.config/polybar/config|56|1|v|dosini
+	font-2 = "JetBrainsMono Nerd Font:size=12;
+69076468550ab6c0493d405820a9aafe|file:///home/maky/.config/polybar/config|388|1|V|dosini
+	ramp-0 = 
+	ramp-1 = 
+	ramp-2 = 
+4aea4b8e7467ca8eb10551b5bcf33732|file:///home/maky/.config/polybar/config|54|1|V|dosini
+	font-0 = "Input Mono Font:size=11;0"
+	font-1 = "Input Mono Font:size=11;0"
+	font-2 = "JetBrainsMono Nerd Font:size=12;0"
+062b780a459cdc3e3bd650c3036056ff|file:///home/maky/.config/i3/config|253|1|V|i3config
+	# old windows border color
+	#                       border      background      text        indicator
+	#client.focused          $bgcolor    $bgcolor        $textcolor  $bgcolor
+	#client.unfocused        $ibgcolor   $ibgcolor       $textcolor  $ibgcolor
+	#client.focused_inactive $ibgcolor   $ibgcolor       $itextcolor  $ibgcolor
+	#client.urgent           $ubcolor    $ubcolor        $textcolor  $ubcolor 
+0ff3f7925644db89c6c6b974ed2a32f3|file:///home/maky/.config/i3/config|236|1|V|i3config
+	# Window borders
+	set $bgcolor    #00897b33
+	set $ibgcolor   #363636
+	set $fws        #00897b80
+	set $barcolor   #00897b0D
+	set $textcolor  #ffffff
+	set $ubcolor    #ff0000
+	set $itextcolor #969696

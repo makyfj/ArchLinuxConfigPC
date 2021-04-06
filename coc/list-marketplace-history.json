@@ -1,8 +1,16 @@
 {
   "L2hvbWUvbWFreQ==": [
-    "cspel"
+    "cspel",
+    "python",
+    "snip"
   ],
   "L2hvbWUvbWFreS9GYXJtaW5nZGFsZS9TcHJpbmcyMDIxL0JDUzM1MC9MYWJzL0Jvb3RzdHJhcA==": [
     "boostrap"
+  ],
+  "L2hvbWUvbWFreS8uY29uZmlnL252aW0vbHVh": [
+    "lua"
+  ],
+  "L2hvbWUvbWFreS9XZWJEZXZlbG9wbWVudC9UYWlsd2luZENTUw==": [
+    "tail"
   ]
 }

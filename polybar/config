@@ -18,12 +18,12 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #33222
-background-alt = #bf444
+background = #222
+background-alt = #5b805f
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #ffffff
-primary = #1b9fc6
+primary = #1db954
 secondary = #ffffff
 alert = #bd2c40
 
@@ -51,18 +51,16 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=12;2
-font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
-font-5 = Font Awesome 
+font-0 = "JetBrainsMono Nerd Font:style=Medium:size=11;2"
+font-1 = "JetBrainsMono Nerd Font:style=Bold:size=10;2"
+font-2 = "JetBrainsMono Nerd Font:size=19;5"
+font-3 = "Material Icons Outlined:10;4"
 
-modules-left = i3 spotify
-modules-center = xwindow
-modules-right = powermenu filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date 
+modules-left = i3 xwindow
+modules-center = spotify
+modules-right = memory cpu wlan temperature date 
 
-separator = |
+separator = 
 
 tray-position = none
 tray-padding = 2
@@ -85,7 +83,7 @@ cursor-scroll = ns-resize
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = "  "
 format = <label>
 exec = python /home/maky/.config/polybar/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
@@ -388,9 +386,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]

@@ -234,25 +234,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # Window borders
-set $bgcolor    #00897b33
-set $ibgcolor   #363636
-set $fws        #00897b80
-set $barcolor   #00897b0D
-set $textcolor  #ffffff
-set $ubcolor    #ff0000
-set $itextcolor #969696
-
-# Window borders
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #abb2bf
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
-
-# old windows border color
-#                       border      background      text        indicator
-#client.focused          $bgcolor    $bgcolor        $textcolor  $bgcolor
-#client.unfocused        $ibgcolor   $ibgcolor       $textcolor  $ibgcolor
-#client.focused_inactive $ibgcolor   $ibgcolor       $itextcolor  $ibgcolor
-#client.urgent           $ubcolor    $ubcolor        $textcolor  $ubcolor 
