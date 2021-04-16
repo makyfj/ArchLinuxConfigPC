@@ -59,6 +59,9 @@ COMPLETION_WAITING_DOTS="true"
 # Different colors for folders and files
 alias ls='ls --color=auto'
 
+# true colors
+alias tmux='TERM=screen-256color tmux'
+
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -99,6 +102,7 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -108,6 +112,18 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# go binary
+export PATH=/home/$USER/.local/go/bin:$PATH
+export GOPATH=$HOME/.local/go
+
+# Clion bin
+export PATH=/home/$USER/.local/clion/bin:$PATH
+export GOPATH=$HOME/.local/clion
+
+# python pip
+export PATH=/home/$USER/.local/bin/python3:$PATH
+export GOPATH=$HOME/.local/bin/python3
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -125,3 +141,19 @@ export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 # plugins
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/maky/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/maky/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/maky/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/maky/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+conda config --set auto_activate_base false
