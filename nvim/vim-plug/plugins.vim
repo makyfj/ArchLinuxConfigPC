@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Themes
 	Plug 'christianchiarulli/nvcode-color-schemes.vim'
+	Plug 'joshdick/onedark.vim'
 
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
