@@ -11,6 +11,9 @@ exec_always --no-startup-id picom -b
 # Autotiling
 exec_always --no-startup-id autotiling
 
+# Dual montior 
+exec --no-startup-id xrandr --output DP-0 --auto --right-of DVI-D-0 --auto
+
 #./image1.jpg status bar
 # bar {
 #   position top
@@ -171,6 +174,21 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# Dual monitor
+set $firstMonitor DVI-D-0
+set $secondMonitor DP-0
+
+workspace 1 output $firstMonitor
+workspace 2 output $firstMonitor
+workspace 3 output $firstMonitor
+workspace 4 output $firstMonitor
+workspace 5 output $firstMonitor
+workspace 6 output $secondMonitor
+workspace 7 output $secondMonitor
+workspace 8 output $secondMonitor
+workspace 9 output $secondMonitor
+workspace 10 output $secondMonitor
 
 # Assign Workspaces:
 assign [class="discord"] $ws4
